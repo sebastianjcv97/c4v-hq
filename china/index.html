@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Technology — Plan Estratégico Shenzhen · Directorio C4V</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',Helvetica,Arial,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.65;padding:0}
+.container{max-width:1240px;margin:0 auto;padding:32px}
+.header{background:linear-gradient(135deg,#1a1f2e 0%,#0d1117 100%);padding:56px 40px;border-radius:16px;margin-bottom:32px;border:1px solid #30363d}
+.header h1{font-size:38px;font-weight:700;margin-bottom:8px;background:linear-gradient(90deg,#79c0ff,#a371f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header .subtitle{font-size:18px;color:#c9d1d9;margin-bottom:24px}
+.header .meta{display:flex;gap:32px;flex-wrap:wrap;color:#8b949e;font-size:14px;border-top:1px solid #30363d;padding-top:20px}
+.header .meta strong{color:#e6edf3;display:block;margin-bottom:2px;font-size:12px;text-transform:uppercase;letter-spacing:0.5px}
+.badge{display:inline-block;padding:4px 12px;border-radius:12px;font-size:12px;font-weight:600;margin-left:8px}
+.badge.green{background:rgba(46,160,67,0.2);color:#3fb950}
+.badge.yellow{background:rgba(187,128,9,0.2);color:#d29922}
+.badge.red{background:rgba(248,81,73,0.2);color:#f85149}
+.badge.blue{background:rgba(56,139,253,0.2);color:#58a6ff}
+.badge.purple{background:rgba(163,113,247,0.2);color:#a371f7}
+h2{font-size:26px;margin:56px 0 20px;color:#e6edf3;border-bottom:1px solid #30363d;padding-bottom:12px;display:flex;align-items:center;gap:12px}
+h2 .icon{font-size:30px}
+h2 .num{background:#21262d;color:#79c0ff;font-size:14px;padding:4px 10px;border-radius:8px;font-weight:600}
+h3{font-size:19px;margin:28px 0 12px;color:#79c0ff}
+h4{font-size:15px;margin:16px 0 8px;color:#c9d1d9;font-weight:600}
+p{margin-bottom:14px;color:#c9d1d9}
+strong{color:#e6edf3}
+em{color:#a371f7;font-style:normal;font-weight:500}
+.lead{font-size:17px;color:#c9d1d9;margin-bottom:20px;padding:0 0 16px;border-bottom:1px solid #21262d}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
+.kpi-card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:24px;text-align:center;transition:transform 0.2s}
+.kpi-card:hover{transform:translateY(-2px);border-color:#58a6ff}
+.kpi-card .label{font-size:11px;color:#8b949e;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;font-weight:600}
+.kpi-card .value{font-size:32px;font-weight:700;color:#3fb950;margin-bottom:4px;line-height:1.1}
+.kpi-card .delta{font-size:13px;color:#8b949e;margin-top:6px}
+.kpi-card.alert .value{color:#f85149}
+.kpi-card.warn .value{color:#d29922}
+.kpi-card.info .value{color:#58a6ff}
+.kpi-card.purple .value{color:#a371f7}
+table{width:100%;border-collapse:collapse;margin:16px 0;background:#161b22;border-radius:12px;overflow:hidden;font-size:14px}
+table th{background:#21262d;color:#79c0ff;padding:12px;text-align:left;font-weight:600;border-bottom:1px solid #30363d}
+table td{padding:12px;border-bottom:1px solid #21262d;color:#c9d1d9;vertical-align:top}
+table tr:last-child td{border-bottom:none}
+table tr:hover{background:rgba(56,139,253,0.05)}
+.card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:24px;margin:16px 0}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:16px 0}
+.scenario-card{background:#161b22;border:1px solid #30363d;border-radius:16px;padding:28px;margin:20px 0;position:relative}
+.scenario-card.a{border-top:4px solid #f85149}
+.scenario-card.b{border-top:4px solid #3fb950}
+.scenario-card.c{border-top:4px solid #58a6ff}
+.scenario-card.d{border-top:4px solid #a371f7;background:linear-gradient(180deg,rgba(163,113,247,0.06) 0%,#161b22 200px)}
+.scenario-card h3{margin-top:0}
+.recommended-tag{position:absolute;top:16px;right:16px;background:#a371f7;color:#fff;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.foda-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+.foda-cell{background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:16px}
+.foda-cell h4{margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.foda-cell ul{margin-left:18px;font-size:13px;line-height:1.7}
+.foda-cell.f h4{color:#3fb950}
+.foda-cell.o h4{color:#58a6ff}
+.foda-cell.d h4{color:#d29922}
+.foda-cell.a h4{color:#f85149}
+.priority-critical{border-left:4px solid #f85149}
+.priority-high{border-left:4px solid #d29922}
+.priority-medium{border-left:4px solid #58a6ff}
+.tag{display:inline-block;padding:2px 8px;border-radius:8px;font-size:11px;background:#21262d;color:#79c0ff;margin-right:4px}
+.tag.green{background:rgba(46,160,67,0.2);color:#3fb950}
+.tag.yellow{background:rgba(210,153,34,0.2);color:#d29922}
+.tag.red{background:rgba(248,81,73,0.2);color:#f85149}
+.alert-box{background:rgba(248,81,73,0.1);border-left:4px solid #f85149;padding:18px 22px;border-radius:8px;margin:20px 0}
+.alert-box strong{color:#f85149}
+.success-box{background:rgba(46,160,67,0.1);border-left:4px solid #3fb950;padding:18px 22px;border-radius:8px;margin:20px 0}
+.success-box strong{color:#3fb950}
+.info-box{background:rgba(56,139,253,0.1);border-left:4px solid #58a6ff;padding:18px 22px;border-radius:8px;margin:20px 0}
+.info-box strong{color:#58a6ff}
+.warn-box{background:rgba(210,153,34,0.1);border-left:4px solid #d29922;padding:18px 22px;border-radius:8px;margin:20px 0}
+.warn-box strong{color:#d29922}
+.decision-box{background:linear-gradient(135deg,rgba(163,113,247,0.12) 0%,rgba(88,166,255,0.08) 100%);border:2px solid #a371f7;padding:24px;border-radius:12px;margin:24px 0}
+.decision-box h4{color:#a371f7;font-size:15px;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.decision-box strong{color:#e6edf3}
+.glossary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:16px 0}
+.glossary-item{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px}
+.glossary-item .term{color:#79c0ff;font-weight:600;font-size:14px;margin-bottom:4px}
+.glossary-item .def{color:#c9d1d9;font-size:13px}
+.chart-container{background:#0d1117;border:1px solid #30363d;border-radius:12px;padding:24px;margin:20px 0}
+.footer{text-align:center;padding:32px;color:#8b949e;font-size:13px;border-top:1px solid #30363d;margin-top:64px}
+.toc{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:24px;margin:24px 0}
+.toc h3{margin-top:0}
+.toc ol{padding-left:24px;color:#c9d1d9}
+.toc ol li{padding:5px 0}
+.toc a{color:#58a6ff;text-decoration:none;font-size:15px}
+.toc a:hover{text-decoration:underline}
+.toc .annex{color:#8b949e;font-size:13px;margin-top:8px}
+.toc .annex a{color:#8b949e}
+.analogia{background:rgba(163,113,247,0.06);border-left:3px solid #a371f7;padding:12px 18px;border-radius:6px;margin:14px 0;font-size:14px;color:#c9d1d9;font-style:italic}
+.analogia::before{content:'💡 ';font-style:normal}
+.tldr-box{background:linear-gradient(135deg,#1a1f2e 0%,#0d2840 100%);border:2px solid #58a6ff;padding:32px;border-radius:16px;margin:24px 0}
+.tldr-box h3{color:#79c0ff;margin-top:0;font-size:22px}
+.financial-table{font-size:13px}
+.financial-table td.indent{padding-left:32px;color:#8b949e}
+.financial-table td.total{font-weight:700;background:rgba(56,139,253,0.05);border-top:2px solid #30363d}
+.financial-table td.result{font-weight:700;background:rgba(46,160,67,0.08);color:#3fb950;border-top:2px solid #30363d}
+.financial-table td.subtotal{font-weight:600;background:rgba(56,139,253,0.04);border-top:1px solid #30363d}
+.scenario-comparison{font-size:13px}
+.scenario-comparison .winner{background:rgba(46,160,67,0.1);color:#3fb950;font-weight:600}
+@media print{body{background:white;color:black}.header{background:#f6f8fa;color:black}h1,h2,h3{color:black!important;-webkit-text-fill-color:black!important}}
+</style>
+</head>
+<body>
+<div style="background:#161b22;border-bottom:1px solid #30363d;padding:10px 24px;font-size:13px;position:sticky;top:0;z-index:99">
+<a href="../" style="color:#8b949e;text-decoration:none">← C4V HQ</a>
+<span style="color:#30363d;margin:0 10px">|</span>
+<span style="color:#c9d1d9">🇨🇳 CV Technology China</span>
+</div>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+<h1>🚀 CV Technology</h1>
+<p class="subtitle">Plan estratégico para crear nuestra propia operación de exportación a Latinoamérica</p>
+<div class="meta">
+<span><strong>Presentado por</strong>Sebastián Contreras</span>
+<span><strong>Audiencia</strong>Jose · Irene · Jair</span>
+<span><strong>Fecha</strong>25 mayo 2026 (actualizado)</span>
+<span><strong>Versión</strong>v9 — pivote Shenzhen confirmado + reportes Mei</span>
+<span><strong>Estado</strong><span class="badge yellow">EN DECISIÓN · Pivote confirmado 24-may</span></span>
+</div>
+</div>
+
+<!-- 🔄 BANNER ACTUALIZACIÓN PIVOTE SHENZHEN -->
+<div style="background:linear-gradient(135deg,#c62828 0%,#8e1f1f 100%);color:#fff;padding:24px 28px;border-radius:14px;margin:20px 0 32px;box-shadow:0 4px 16px rgba(198,40,40,0.3)">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+<span style="background:#fff;color:#c62828;padding:4px 12px;border-radius:6px;font-weight:bold;font-size:12px;letter-spacing:0.5px">⚡ ACTUALIZACIÓN 25-MAY-2026</span>
+<span style="font-size:18px;font-weight:700">PIVOTE CONFIRMADO: QINGDAO → SHENZHEN</span>
+</div>
+<p style="margin-bottom:14px;line-height:1.6;font-size:15px">Decisión Sebas+Jose+Irene del 24-may. La estructura del análisis (4 escenarios, líneas 1+2, profit) se mantiene válida. Lo que cambia: <strong>geografía operativa + proveedores + algunos costos</strong>.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:14px">
+<div style="background:rgba(0,0,0,0.25);padding:12px 14px;border-radius:8px">
+<div style="font-size:11px;text-transform:uppercase;opacity:0.8;margin-bottom:4px">🏦 Banco WFOE</div>
+<div style="font-size:14px;font-weight:600">Ping An · Nanshan (Shenzhen)</div>
+<div style="font-size:12px;opacity:0.85;margin-top:4px">CNY ok · USD trámite · SAFE auto</div>
+</div>
+<div style="background:rgba(0,0,0,0.25);padding:12px 14px;border-radius:8px">
+<div style="font-size:11px;text-transform:uppercase;opacity:0.8;margin-bottom:4px">🏭 Warehouse</div>
+<div style="font-size:14px;font-weight:600">Yantian (盐田)</div>
+<div style="font-size:12px;opacity:0.85;margin-top:4px">Mei recomienda 9.5/10 · FTZ disponible</div>
+</div>
+<div style="background:rgba(0,0,0,0.25);padding:12px 14px;border-radius:8px">
+<div style="font-size:11px;text-transform:uppercase;opacity:0.8;margin-bottom:4px">🏘️ Vivienda Sebas</div>
+<div style="font-size:14px;font-weight:600">Shekou (Nanshan)</div>
+<div style="font-size:12px;opacity:0.85;margin-top:4px">Mei recomienda 9.4/10 · comunidad expat</div>
+</div>
+<div style="background:rgba(0,0,0,0.25);padding:12px 14px;border-radius:8px">
+<div style="font-size:11px;text-transform:uppercase;opacity:0.8;margin-bottom:4px">🚚 Proveedores</div>
+<div style="font-size:14px;font-weight:600">Good Laser + Muyong</div>
+<div style="font-size:12px;opacity:0.85;margin-top:4px">Reunión Muyong martes 9am Foshan</div>
+</div>
+</div>
+<div style="background:rgba(255,213,0,0.15);border-left:4px solid #ffd700;padding:12px 14px;border-radius:4px">
+<strong>⚠️ Lectura del math:</strong> los números proyectados de los 4 escenarios (Profit año 1, sensibilidad, worst-case) se calcularon con base costos Qingdao. Con costos Shenzhen reales (+30-55% por alquileres premium), el <strong>profit año 1 estimado real es ~$95-115K en lugar de los $137K del Escenario D</strong>. Pendiente recalcular post-decisión final vivienda. Ver <a href="#anexo-shenzhen" style="color:#fff;text-decoration:underline">Anexo E — Actualización Shenzhen</a> para detalles.
+</div>
+</div>
+
+
+<!-- TOC -->
+<div class="toc">
+<h3>📑 Cómo leer esta presentación</h3>
+<p style="color:#8b949e;margin-bottom:16px">Presentamos <strong>4 alternativas concretas</strong> para arrancar CV Technology. NO son fases — son caminos paralelos. Para cada uno: análisis financiero, FODA, valor percibido. El detalle más profundo está en el Escenario D (mi recomendación), pero los 4 están sobre la mesa.</p>
+<ol>
+<li><a href="#tldr">El resumen en 1 página</a></li>
+<li><a href="#glosario">Glosario — términos técnicos</a></li>
+<li><a href="#porque">¿Por qué crear CV Technology?</a></li>
+<li><a href="#queses">¿Qué es CV Technology?</a></li>
+<li><a href="#escenarios">Los 4 escenarios</a></li>
+<li><a href="#financiero">Estado Financiero detallado (modelo D)</a></li>
+<li><a href="#precios">Análisis de precio Línea 2</a> <span style="color:#a371f7;font-size:12px">⚠️ Sensibilidad</span></li>
+<li><a href="#vp">Valor Percibido — VP por precio y escenario</a></li>
+<li><a href="#casos">Cómo lo hicieron otras empresas chinas</a></li>
+<li><a href="#servicio">Servicio técnico Perú (proyecto paralelo)</a></li>
+<li><a href="#pagos">Plan de pagos y financiamiento</a></li>
+<li><a href="#riesgos">Riesgos por escenario</a></li>
+<li><a href="#pido">Lo que les pido al board</a> <span style="color:#a371f7;font-size:12px">⚠️ Acciones</span></li>
+</ol>
+<div class="annex">📂 <strong>Anexos:</strong>
+<a href="#anexo-cadena">Cadena suministro</a> ·
+<a href="#anexo-mercados">Mercados y fletes</a> ·
+<a href="#anexo-calendario">Calendario China</a> ·
+<a href="#anexo-contactos">Contactos</a> ·
+<a href="#anexo-setup">Setup legal/fiscal/organizacional</a>
+</div>
+</div>
+
+<!-- TL;DR -->
+<section id="tldr">
+<h2><span class="icon">📊</span><span class="num">1</span>El resumen en 1 página</h2>
+
+<div class="tldr-box">
+<h3>La situación</h3>
+<p style="font-size:16px;color:#e6edf3;line-height:1.7">Queremos crear una operación en China (<strong>CV Technology</strong>) que nos permite (1) cobrar el 13% IVA refund que China devuelve por exportar (~$38K/año al volumen actual), (2) vender directamente en Alibaba a clientes Latam (Línea 2), (3) independizarnos progresivamente de Voiern como único proveedor.</p>
+
+<h3 style="margin-top:24px">Hay 4 formas de hacerlo</h3>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px">
+
+<div style="background:rgba(248,81,73,0.08);border:1px solid #f85149;border-radius:12px;padding:18px">
+<div style="font-size:11px;color:#f85149;text-transform:uppercase;letter-spacing:1px;font-weight:600">Escenario A</div>
+<div style="font-size:17px;color:#e6edf3;font-weight:600;margin:6px 0 10px">Warehouse propio Shenzhen (Yantian) FULL</div>
+<div style="font-size:13px;color:#c9d1d9;line-height:1.6">Galpón 800m² + 2 staff fijo + Sebastián vive China + mods completos.</div>
+<div style="margin-top:12px;padding-top:12px;border-top:1px solid #30363d;font-size:12px">
+<span style="color:#8b949e">Inversión:</span> <strong style="color:#e6edf3">$55K</strong> ·
+<span style="color:#8b949e">Mensual:</span> <strong style="color:#e6edf3">$8K</strong> ·
+<span style="color:#8b949e">Profit Año 1:</span> <strong style="color:#f85149">+$18K</strong>
+</div>
+</div>
+
+<div style="background:rgba(46,160,67,0.08);border:1px solid #3fb950;border-radius:12px;padding:18px">
+<div style="font-size:11px;color:#3fb950;text-transform:uppercase;letter-spacing:1px;font-weight:600">Escenario B</div>
+<div style="font-size:17px;color:#e6edf3;font-weight:600;margin:6px 0 10px">3PL Shenzhen (Lite)</div>
+<div style="font-size:13px;color:#c9d1d9;line-height:1.6">Sin warehouse propio. 3PL maneja todo. Sin mods. Sebastián en Perú.</div>
+<div style="margin-top:12px;padding-top:12px;border-top:1px solid #30363d;font-size:12px">
+<span style="color:#8b949e">Inversión:</span> <strong style="color:#e6edf3">$10K</strong> ·
+<span style="color:#8b949e">Mensual:</span> <strong style="color:#e6edf3">$3K</strong> ·
+<span style="color:#8b949e">Profit Año 1:</span> <strong style="color:#3fb950">+$85K</strong>
+</div>
+</div>
+
+<div style="background:rgba(56,139,253,0.08);border:1px solid #58a6ff;border-radius:12px;padding:18px">
+<div style="font-size:11px;color:#58a6ff;text-transform:uppercase;letter-spacing:1px;font-weight:600">Escenario C</div>
+<div style="font-size:17px;color:#e6edf3;font-weight:600;margin:6px 0 10px">Hub Panamá Zona Libre</div>
+<div style="font-size:13px;color:#c9d1d9;line-height:1.6">3PL Shenzhen + warehouse Panamá ZLC. Entrega cliente 5-12 días.</div>
+<div style="margin-top:12px;padding-top:12px;border-top:1px solid #30363d;font-size:12px">
+<span style="color:#8b949e">Inversión:</span> <strong style="color:#e6edf3">$41K</strong> ·
+<span style="color:#8b949e">Mensual:</span> <strong style="color:#e6edf3">$4.5K</strong> ·
+<span style="color:#8b949e">Profit Año 1:</span> <strong style="color:#58a6ff">+$64K</strong>
+</div>
+</div>
+
+<div style="background:rgba(163,113,247,0.12);border:2px solid #a371f7;border-radius:12px;padding:18px;position:relative">
+<div style="position:absolute;top:-10px;right:14px;background:#a371f7;color:#fff;padding:3px 10px;border-radius:12px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px">Recomendado</div>
+<div style="font-size:11px;color:#a371f7;text-transform:uppercase;letter-spacing:1px;font-weight:600">Escenario D</div>
+<div style="font-size:17px;color:#e6edf3;font-weight:600;margin:6px 0 10px">Warehouse mini propio</div>
+<div style="font-size:13px;color:#c9d1d9;line-height:1.6">Warehouse 50-80m² + freelance ocasional + Sebastián vive China + mods incluidos.</div>
+<div style="margin-top:12px;padding-top:12px;border-top:1px solid #30363d;font-size:12px">
+<span style="color:#8b949e">Inversión:</span> <strong style="color:#e6edf3">$17.5K</strong> ·
+<span style="color:#8b949e">Mensual:</span> <strong style="color:#e6edf3">$3.7K</strong> ·
+<span style="color:#8b949e">Profit REAL grupo Año 1:</span> <strong style="color:#a371f7">+$33K</strong>
+</div>
+<div style="font-size:11px;color:#8b949e;margin-top:6px;font-style:italic">(L2 externa + IVA refund − costos. NO incluye transferencia interna L1)</div>
+</div>
+
+</div>
+</div>
+
+<div class="decision-box">
+<h4>🤝 Lo que necesito que el board decida</h4>
+<ol style="margin-left:20px;color:#c9d1d9;line-height:2">
+<li><strong>¿Cuál de los 4 escenarios elegimos?</strong> (A / B / C / D)</li>
+<li><strong>Precio referencia Línea 2:</strong> <em>$3,250 FOB</em> (mismo nivel que Voiern en Alibaba — competimos por marca, soporte y WebApp, no por precio bajo)</li>
+<li><strong>¿Cómo financiamos el setup?</strong> 3 escenarios de financiamiento en sección 11</li>
+</ol>
+</div>
+</section>
+
+<!-- GLOSARIO -->
+<section id="glosario">
+<h2><span class="icon">📖</span><span class="num">2</span>Glosario — términos técnicos</h2>
+
+<div class="glossary-grid">
+
+<div class="glossary-item">
+<div class="term">CV Technology</div>
+<div class="def">Empresa nueva en China que crearíamos a mi nombre. Independiente de KUY/C4V pero coordinada.</div>
+</div>
+
+<div class="glossary-item">
+<div class="term">WFOE</div>
+<div class="def">Empresa 100% extranjera en China — no necesita socio chino. Tipo legal de CV Tech.</div>
+</div>
+
+<div class="glossary-item">
+<div class="term">3PL</div>
+<div class="def">Empresa que alquila servicios de almacén, embalaje y envío. Pagás por movimiento, no fijo mensual.</div>
+</div>
+
+<div class="glossary-item">
+<div class="term">ZLC (Panamá)</div>
+<div class="def">Zona Libre de Colón. Zona franca: 0% aranceles, 0% IVA mientras la mercadería esté en bond.</div>
+</div>
+
+<div class="glossary-item">
+<div class="term">FOB</div>
+<div class="def">"Puesto en puerto Yantian (Shenzhen)". Cliente paga su propio flete + aduana + IVA en destino. <strong>Estándar en Alibaba.</strong></div>
+</div>
+
+<div class="glossary-item">
+<div class="term">CIF</div>
+<div class="def">"Puesto en puerto destino con flete incluido". Vendedor coordina flete. Más caro para cliente.</div>
+</div>
+
+<div class="glossary-item">
+<div class="term">FCL / LCL</div>
+<div class="def">FCL = contenedor entero. LCL = compartido (1 sola máquina sale más cara/unidad).</div>
+</div>
+
+<div class="glossary-item">
+<div class="term">IVA refund 13%</div>
+<div class="def">China devuelve el 13% del IVA pagado en productos exportados. ~$182 USD por máquina. Solo lo cobra una empresa china (WFOE).</div>
+</div>
+
+<div class="glossary-item">
+<div class="term">FODA</div>
+<div class="def">Fortalezas, Oportunidades, Debilidades, Amenazas. Análisis estándar para evaluar opciones estratégicas.</div>
+</div>
+
+<div class="glossary-item">
+<div class="term">Valor Percibido (VP)</div>
+<div class="def">VP = Beneficios ÷ Costos. Permite comparar nuestra propuesta vs distribuidor local en una métrica unificada.</div>
+</div>
+
+<div class="glossary-item">
+<div class="term">Voiern</div>
+<div class="def">Fábrica proveedora actual en Liaocheng, China. Le seguimos comprando, ahora a través de CV Tech.</div>
+</div>
+
+<div class="glossary-item">
+<div class="term">Línea 1 / Línea 2</div>
+<div class="def"><strong>L1:</strong> CV Tech → KUY Perú (lo que ya hacemos, ahora con IVA refund). <strong>L2:</strong> CV Tech → cliente Latam directo vía Alibaba.</div>
+</div>
+
+<div class="glossary-item">
+<div class="term">WebApp C4V Assistant</div>
+<div class="def">Aplicación web propia (a desarrollar) — asistente IA en español + biblioteca de parámetros + comunidad. Acceso por serial number de máquina C4V. Diferencial digital no copiable.</div>
+</div>
+
+</div>
+</section>
+
+<!-- POR QUÉ -->
+<section id="porque">
+<h2><span class="icon">🎯</span><span class="num">3</span>¿Por qué crear CV Technology?</h2>
+<p class="lead">3 problemas que CV Tech resuelve:</p>
+
+<h3>Problema 1 — Dependencia total de Voiern</h3>
+<p>Todas nuestras máquinas vienen de una sola fábrica. Voiern ya está vendiendo nuestras máquinas (pintadas distinto) a otros importadores Latam. NDAs no les preocupan firmar. Si nos pelean, quedamos sin producto.</p>
+
+<h3>Problema 2 — Perú es mercado chico, estamos topados</h3>
+<p>~150 máquinas/año en Perú. Duplicar requeriría duplicar marketing/vendedoras/soporte — costo enorme. El mercado peruano no es Brasil ni México.</p>
+
+<h3>Problema 3 — Mercado Latam dormido sin nadie atendiendo</h3>
+<p>Cliente en Bogotá, Guadalajara o Quito hoy elige entre distribuidor local que cobra $4,500-5,500 con soporte, o Alibaba random que cobra $2,500 sin marca. <strong>No existe punto medio</strong>: marca conocida + soporte español + precio razonable.</p>
+
+<div class="success-box">
+<strong>La oportunidad:</strong> exportamos desde China con empresa propia, cobramos IVA refund 13% ($38K/año al volumen actual), abrimos canal directo a Latam con marca C4V (1,500 unidades vendidas + redes TikTok 54.9K seguidores).
+</div>
+</section>
+
+<!-- QUÉ ES -->
+<section id="queses">
+<h2><span class="icon">🏗️</span><span class="num">4</span>¿Qué es CV Technology?</h2>
+<p class="lead">Empresa china (WFOE) que compra a Voiern y revende a (1) KUY Perú con margen + IVA refund, (2) clientes Latam directo vía Alibaba.</p>
+
+<h3>Las 3 empresas del grupo</h3>
+<div class="card">
+<ul style="margin:0 0 0 24px;color:#c9d1d9;line-height:1.9">
+<li><strong>CV Technology (China)</strong> — compra a Voiern, exporta. Cobra IVA refund.</li>
+<li><strong>KUY Importaciones (Perú)</strong> — importa de CV Tech, paga aranceles.</li>
+<li><strong>C4V Laser (Perú)</strong> — marca comercial. Vende al cliente final.</li>
+</ul>
+</div>
+
+<h3>Las dos líneas de venta de CV Tech</h3>
+<div class="card-grid">
+<div class="card priority-medium">
+<h4 style="color:#58a6ff">🇵🇪 LÍNEA 1 — Venderle a KUY Perú</h4>
+<p style="margin-top:8px">CV Tech compra a Voiern, agrega 10% margen bruto (cubre overhead + mejoras), revende a KUY. Formalizado a través de empresa china.</p>
+<p><strong>Volumen:</strong> 150 máq/año (estable)</p>
+<p><strong>Margen bruto:</strong> 10% × $2,300 = $230/máq</p>
+<p><strong>+ IVA refund 13%:</strong> $182/máq</p>
+<p style="background:rgba(46,160,67,0.1);padding:10px;border-radius:6px;margin-top:10px"><strong style="color:#3fb950">Margen disponible L1: ~$61,800/año</strong></p>
+</div>
+
+<div class="card priority-high">
+<h4 style="color:#d29922">🌎 LÍNEA 2 — Vender Alibaba a Latam</h4>
+<p style="margin-top:8px">CV Tech publica en Alibaba (marca C4V). Compran clientes México, Ecuador, Panamá. Sebastián opera desde China + soporte español desde Lima.</p>
+<p><strong>Volumen target:</strong> 5 máq/mes año 1 → 10 año 2 → 15 año 3</p>
+<p><strong>Precio referencia:</strong> $3,250 FOB (mismo nivel que Voiern)</p>
+<p><strong>Margen neto:</strong> $1,024/máq</p>
+<p style="background:rgba(210,153,34,0.1);padding:10px;border-radius:6px;margin-top:10px"><strong style="color:#d29922">Contribución bruta L2 Año 1: ~$61,440</strong></p>
+</div>
+</div>
+
+<h3>💡 WebApp C4V Assistant — el diferencial digital propietario</h3>
+<div class="info-box">
+<p style="margin-bottom:8px"><strong>NO instalamos hardware adicional</strong> en la máquina (copiable). En lugar de eso: <strong>una web app exclusiva para clientes C4V</strong>:</p>
+<ul style="margin:8px 0 0 24px;line-height:1.8">
+<li>Asistente IA en español — cliente sube foto del producto, recibe parámetros recomendados</li>
+<li>Biblioteca de "recetas" para materiales latinos (MDF, acrílico, cartón, vinilo)</li>
+<li>Chat técnico IA 24/7 en español</li>
+<li>Integración con C4V School + marketplace de templates compartidos</li>
+</ul>
+<p style="margin-top:12px"><strong>Costo desarrollo:</strong> $4,000 una vez + $50/mes hosting. 6 semanas. <strong>Justifica vender al mismo precio que Voiern</strong> (con mucho más valor).</p>
+</div>
+</section>
+
+<!-- LOS 4 ESCENARIOS -->
+<section id="escenarios">
+<h2><span class="icon">⚖️</span><span class="num">5</span>Los 4 escenarios — análisis FODA</h2>
+<p class="lead">Cada uno tiene un perfil distinto de costo, riesgo y velocidad. NO son fases — son alternativas paralelas. El board elige cuál arrancar.</p>
+
+<!-- ESCENARIO A -->
+<div class="scenario-card a">
+<h3 style="color:#f85149">🏭 ESCENARIO A — Warehouse propio FULL + Sebastián vive Shenzhen</h3>
+
+<h4>Cómo funciona</h4>
+<p>Galpón 800 m² Yantian (Shenzhen, dentro de Yantian Integrated FTZ). 1 ingeniero + 1 multi-usos contratados. Yo vivo Shekou (Nanshan, Shenzhen) supervisando. Recibimos las máquinas de Voiern, instalamos bot IA hardware + mods externos + manual español, inspeccionamos y despachamos LCL.</p>
+
+<div class="kpi-grid">
+<div class="kpi-card alert"><div class="label">Inversión inicial</div><div class="value">$55K</div></div>
+<div class="kpi-card alert"><div class="label">Gasto mensual</div><div class="value">$8K</div></div>
+<div class="kpi-card"><div class="label">Profit Año 1 @ $3,250</div><div class="value">$18K</div></div>
+<div class="kpi-card alert"><div class="label">Riesgo worst-case</div><div class="value">$130K</div></div>
+</div>
+
+<div class="foda-grid">
+<div class="foda-cell f">
+<h4>🟢 FORTALEZAS</h4>
+<ul>
+<li>Control total (Sebastián ve cada máquina)</li>
+<li>Mods completos (bot IA hardware + mejoras)</li>
+<li>Margen alto por unidad</li>
+<li>Relación directa con Voiern (vecinos)</li>
+<li>Activo físico (warehouse + sistema operativo)</li>
+</ul>
+</div>
+<div class="foda-cell o">
+<h4>🔵 OPORTUNIDADES</h4>
+<ul>
+<li>Vender China local Año 2 (mercado doméstico)</li>
+<li>Hub Asia-Pacífico futuro</li>
+<li>Distribuir otros productos desde mismo warehouse</li>
+<li>Marca C4V dentro del circuito chino</li>
+</ul>
+</div>
+<div class="foda-cell d">
+<h4>🟡 DEBILIDADES</h4>
+<ul>
+<li>Inversión alta ($55K)</li>
+<li>Compromiso 24 meses mínimo</li>
+<li>$8K/mes prendido o apagado</li>
+<li>Difícil pivotar si no funciona</li>
+<li>Yo fuera de Perú = menos control C4V</li>
+</ul>
+</div>
+<div class="foda-cell a">
+<h4>🔴 AMENAZAS</h4>
+<ul>
+<li>Sebastián a 17,000 km del board</li>
+<li>Cambio regulatorio China WFOE</li>
+<li>Personal chino rota post-Spring Festival</li>
+<li>No adaptación cultural</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- ESCENARIO B -->
+<div class="scenario-card b">
+<h3 style="color:#3fb950">📦 ESCENARIO B — 3PL Shenzhen (Lite) + Sebastián en Perú</h3>
+
+<h4>Cómo funciona</h4>
+<p>WFOE registrado SIN warehouse propio. 3PL Shenzhen maneja almacén + embalaje + despacho por movimiento. QC empresa externa en fábrica Voiern. Yo en Perú dirigiendo C4V. <strong>SIN mods</strong> — máquina sale tal cual de Voiern. WebApp C4V Assistant es el único diferencial.</p>
+
+<div class="kpi-grid">
+<div class="kpi-card"><div class="label">Inversión inicial</div><div class="value">$10K</div></div>
+<div class="kpi-card info"><div class="label">Gasto mensual</div><div class="value">$3K</div></div>
+<div class="kpi-card"><div class="label">Profit Año 1 @ $3,250</div><div class="value">$85K</div></div>
+<div class="kpi-card info"><div class="label">Riesgo worst-case</div><div class="value">$40K</div></div>
+</div>
+
+<div class="foda-grid">
+<div class="foda-cell f">
+<h4>🟢 FORTALEZAS</h4>
+<ul>
+<li>Capital mínimo ($10K)</li>
+<li>Sebastián queda en Perú</li>
+<li>Break-even muy rápido</li>
+<li>Riesgo muy bajo ($40K worst case)</li>
+<li>WFOE registrado = abre opciones</li>
+</ul>
+</div>
+<div class="foda-cell o">
+<h4>🔵 OPORTUNIDADES</h4>
+<ul>
+<li>Validar mercado real con bajo costo</li>
+<li>Capital sobrante a marketing (no fierros)</li>
+<li>Pivotear rápido si no funciona</li>
+<li>Probar pricing flexible</li>
+</ul>
+</div>
+<div class="foda-cell d">
+<h4>🟡 DEBILIDADES</h4>
+<ul>
+<li><strong>Sin mods</strong> → producto idéntico al de Voiern</li>
+<li>Sin diferencial físico (solo WebApp)</li>
+<li>Dependencia QC externo (no controlamos)</li>
+<li>Sin presencia física en China</li>
+<li>Bot IA hardware queda postergado</li>
+</ul>
+</div>
+<div class="foda-cell a">
+<h4>🔴 AMENAZAS</h4>
+<ul>
+<li>Voiern compite con mismo producto en Alibaba</li>
+<li>QC externo no detecta defectos sutiles</li>
+<li>Voiern decide vendernos solo tier 4</li>
+<li>Pérdida de relación Voiern</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- ESCENARIO C -->
+<div class="scenario-card c">
+<h3 style="color:#58a6ff">🌎 ESCENARIO C — Hub Panamá Zona Libre Colón</h3>
+
+<h4>Cómo funciona</h4>
+<p>WFOE en China + operación en ZLC Panamá. Embarcamos FCL Yantian (Shenzhen) → Panamá cada 1.5-2 meses. Las máquinas quedan en ZLC en bond (sin aranceles ni IVA). Cuando un cliente compra, el 3PL Panamá despacha en 5-12 días al país destino.</p>
+
+<div class="kpi-grid">
+<div class="kpi-card info"><div class="label">Inversión inicial</div><div class="value">$41K</div></div>
+<div class="kpi-card info"><div class="label">Gasto mensual</div><div class="value">$4.5K</div></div>
+<div class="kpi-card"><div class="label">Profit Año 1 @ $3,250</div><div class="value">$64K</div></div>
+<div class="kpi-card info"><div class="label">Riesgo worst-case</div><div class="value">$60K</div></div>
+</div>
+
+<div class="foda-grid">
+<div class="foda-cell f">
+<h4>🟢 FORTALEZAS</h4>
+<ul>
+<li><strong>TIEMPO ENTREGA 5-12 DÍAS</strong> (resuelve miedo #1 cliente latino)</li>
+<li>FCL más barato por unidad</li>
+<li>ZLC = 0% aranceles, 0% IVA almacén</li>
+<li>Panamá usa USD oficial — sin FX risk</li>
+<li>Margen alto con poco capital vs A</li>
+</ul>
+</div>
+<div class="foda-cell o">
+<h4>🔵 OPORTUNIDADES</h4>
+<ul>
+<li>Hub para reexportar TODA Centroamérica + Caribe + Sudamérica norte</li>
+<li>Cliente paga al recibir (mejor cash flow)</li>
+<li>Atraer clientes premium por velocidad</li>
+<li>Diferencial REAL vs Voiern (45 días vs 12 días)</li>
+</ul>
+</div>
+<div class="foda-cell d">
+<h4>🟡 DEBILIDADES</h4>
+<ul>
+<li>Compromiso de volumen (FCL mínimo 8-10 máq)</li>
+<li>Requiere socio confiable en Panamá</li>
+<li>Capital inmovilizado en stock Panamá</li>
+<li>Inversión dual (China + Panamá)</li>
+</ul>
+</div>
+<div class="foda-cell a">
+<h4>🔴 AMENAZAS</h4>
+<ul>
+<li>Si volumen baja → contenedor parado consume capital</li>
+<li>Robo / fraude ZLC (incidentes reportados)</li>
+<li>Cambio regulatorio Panamá</li>
+<li>Distancia cliente argentino / chileno</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- ESCENARIO D -->
+<div class="scenario-card d">
+<div class="recommended-tag">🎯 Recomendado</div>
+<h3 style="color:#a371f7">🏠 ESCENARIO D — Warehouse mini propio + Sebastián vive Shenzhen</h3>
+
+<h4>Cómo funciona</h4>
+<p>Warehouse propio chico <strong>50-80 m²</strong> en Huangdao (no 800 m²). <strong>SIN staff fijo</strong> — solo Sebastián supervisa. <strong>Freelance ocasional</strong> ($21/máq) cuando llegan lotes. Yo vivo Shekou (Nanshan, Shenzhen). Cuando llega contenedor KUY (Línea 1), alquilo warehouse temporal extra 1-2 semanas para hacer mods + QC del lote. <strong>Mods completos en TODAS las máquinas</strong> (L1 y L2): bot IA hardware + luces + logo + manual español.</p>
+
+<div class="kpi-grid">
+<div class="kpi-card purple"><div class="label">Inversión inicial</div><div class="value">$17.5K</div></div>
+<div class="kpi-card purple"><div class="label">Gasto mensual</div><div class="value">$3.7K</div></div>
+<div class="kpi-card purple"><div class="label">Profit Año 1 @ $3,250</div><div class="value">$68K</div></div>
+<div class="kpi-card purple"><div class="label">Riesgo worst-case</div><div class="value">$30K</div></div>
+</div>
+
+<div class="info-box">
+<strong>Nota sobre el salario de Sebastián:</strong> CV Tech le paga $2,000/mes (todo incluido — vivienda + comida + ahorros). A nivel grupal, Sebastián ya cobra $1,500/mes en C4V Perú hoy. El <strong>costo incremental real al grupo es solo $500/mes</strong>. Para el Estado Financiero de CV Tech como entidad, se imputa $2,000/mes completo (contabilidad correcta).
+</div>
+
+<div class="foda-grid">
+<div class="foda-cell f">
+<h4>🟢 FORTALEZAS</h4>
+<ul>
+<li>Mods completos (bot IA + luces + logo + manual)</li>
+<li>Inversión baja ($17.5K cash real)</li>
+<li>Sebastián cuesta solo $500 incremental al grupo</li>
+<li>Break-even rápido (2-3 máq/mes L2)</li>
+<li>Sin compromiso staff fijo China</li>
+<li>Sebastián construye red China + relación Voiern presencial</li>
+<li>Mantiene IVA refund 13%</li>
+<li>Margen sano $1,024/máq L2 a $3,250</li>
+</ul>
+</div>
+<div class="foda-cell o">
+<h4>🔵 OPORTUNIDADES</h4>
+<ul>
+<li>Diferenciación real vs Voiern desde día 1</li>
+<li>Negociación Voiern presencial = mejor precio</li>
+<li>Si crece volumen → upgrade a Escenario A fácil</li>
+<li>Vender China local Año 2 (posible)</li>
+<li>Reducir costos en años 2-3 (sin contratar más staff)</li>
+</ul>
+</div>
+<div class="foda-cell d">
+<h4>🟡 DEBILIDADES</h4>
+<ul>
+<li>Sebastián divide tiempo (Lima/China)</li>
+<li>Capacidad limitada (10-15 máq/mes max)</li>
+<li>Depende de freelance confiable</li>
+<li>Cuello de botella si Sebastián enferma</li>
+<li>Tiempo entrega sigue 35-45 días (no como C)</li>
+</ul>
+</div>
+<div class="foda-cell a">
+<h4>🔴 AMENAZAS</h4>
+<ul>
+<li>Si necesita estar mucho en Lima → operación China sufre</li>
+<li>Visa renovable anual</li>
+<li>Si crece > 15 máq/mes → cuello de botella</li>
+<li>Spring Festival sin Sebastián = sin reemplazo</li>
+<li>Voiern ve el flujo de mods (riesgo copia)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- COMPARATIVA -->
+<h3>Comparativa lado a lado de los 4 escenarios (precio L2: $3,250 FOB)</h3>
+<table class="scenario-comparison">
+<tr><th>Métrica</th><th style="color:#f85149">A — Full</th><th style="color:#3fb950">B — Lite 3PL</th><th style="color:#58a6ff">C — Hub Panamá</th><th style="color:#a371f7">D — Mini propio</th></tr>
+<tr><td>Inversión cash real</td><td>$27K</td><td class="winner">$10K</td><td>$41K</td><td>$17.5K</td></tr>
+<tr><td>Gasto mensual operativo</td><td>$8K</td><td class="winner">$3K</td><td>$4.5K</td><td>$3.7K</td></tr>
+<tr><td>Profit Año 1</td><td>$18K</td><td>$85K (sin mods)</td><td>$64K</td><td class="winner">$68K</td></tr>
+<tr><td>Profit Año 3</td><td>$120K</td><td>$155K (sin mods)</td><td>$220K</td><td class="winner">$177K</td></tr>
+<tr><td>Tiempo entrega cliente</td><td>35-45 días</td><td>35-45 días</td><td class="winner">5-12 días</td><td>35-45 días</td></tr>
+<tr><td>Mods en máquina</td><td class="winner">✅ Sí</td><td>❌ No</td><td>❌ No</td><td class="winner">✅ Sí</td></tr>
+<tr><td>WebApp C4V Assistant</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>Sebastián vive</td><td>China</td><td class="winner">Perú</td><td>Perú (viaja)</td><td>China</td></tr>
+<tr><td>Riesgo worst-case</td><td>$130K</td><td class="winner">$40K</td><td>$60K</td><td>$30K</td></tr>
+<tr><td>Compromiso operativo</td><td>Alto</td><td class="winner">Bajo</td><td>Medio</td><td>Medio-bajo</td></tr>
+<tr><td>Diferenciación producto</td><td>Alta</td><td>Baja</td><td>Media</td><td>Alta</td></tr>
+<tr><td>Activo permanente</td><td>Warehouse + WebApp</td><td>WFOE + WebApp</td><td>WFOE + Stock</td><td>WFOE + WebApp + Marca</td></tr>
+</table>
+</section>
+
+<!-- ESTADO FINANCIERO DETALLADO -->
+<section id="financiero">
+<h2><span class="icon">💰</span><span class="num">6</span>Estado Financiero detallado — Escenario D (recomendado)</h2>
+<p class="lead">Análisis con costos separados por línea (igual que un estado de resultados contable). Precio referencia L2: <strong>$3,250 FOB</strong>.</p>
+
+<h3>📋 Línea 1 — CV Tech vende a KUY (150 máq/año)</h3>
+<table class="financial-table">
+<tr><th>Concepto</th><th>USD/año</th><th>USD/mes</th></tr>
+<tr><td><strong>Ventas brutas a KUY</strong> (150 × $2,530)</td><td>$379,500</td><td>$31,625</td></tr>
+<tr><td class="indent">(−) COGS Voiern (150 × $2,300)</td><td>($345,000)</td><td>($28,750)</td></tr>
+<tr><td class="subtotal">Margen bruto sobre producto</td><td class="subtotal">$34,500</td><td class="subtotal">$2,875</td></tr>
+<tr><td>(+) IVA refund 13% China (150 × $182)</td><td>$27,300</td><td>$2,275</td></tr>
+<tr><td class="total">MARGEN DISPONIBLE LÍNEA 1</td><td class="total">$61,800</td><td class="total">$5,150</td></tr>
+
+<tr><td colspan="3" style="background:#0d1117;font-weight:600;color:#79c0ff;padding-top:16px">COSTOS DIRECTOS VARIABLES (por máquina)</td></tr>
+<tr><td class="indent">Bot IA hardware (150 × $14)</td><td>($2,100)</td><td>($175)</td></tr>
+<tr><td class="indent">Mods externos: luces + logo (150 × $30)</td><td>($4,500)</td><td>($375)</td></tr>
+<tr><td class="indent">Manual español + empaque (150 × $13)</td><td>($1,950)</td><td>($163)</td></tr>
+<tr><td class="indent">Freelance mods + QC (6 lotes × $250)</td><td>($1,500)</td><td>($125)</td></tr>
+<tr><td class="indent">Aduana export FCL (6 contenedores × $200)</td><td>($1,200)</td><td>($100)</td></tr>
+<tr><td class="subtotal">Total costos directos L1</td><td class="subtotal">($11,250)</td><td class="subtotal">($938)</td></tr>
+
+<tr><td colspan="3" style="background:#0d1117;font-weight:600;color:#79c0ff;padding-top:16px">OPEX ASIGNADO A L1</td></tr>
+<tr><td class="indent">Alquiler warehouse temporal contenedor KUY (100% L1)</td><td>($960)</td><td>($80)</td></tr>
+<tr><td class="indent">Sebastián salario (50% = $1,000/mes)</td><td>($12,000)</td><td>($1,000)</td></tr>
+<tr><td class="indent">50% Contador básico externo</td><td>($1,800)</td><td>($150)</td></tr>
+<tr><td class="indent">40% Transporte interno China</td><td>($480)</td><td>($40)</td></tr>
+<tr><td class="indent">50% Buffer + visa</td><td>($1,200)</td><td>($100)</td></tr>
+<tr><td class="subtotal">Total OPEX L1</td><td class="subtotal">($16,440)</td><td class="subtotal">($1,370)</td></tr>
+
+<tr><td class="result">🟢 RESULTADO NETO LÍNEA 1</td><td class="result">$34,110</td><td class="result">$2,843</td></tr>
+</table>
+
+<h3>📋 Línea 2 — CV Tech vende Alibaba (60 máq/año a $3,250 FOB)</h3>
+<table class="financial-table">
+<tr><th>Concepto</th><th>USD/año</th><th>USD/mes</th></tr>
+<tr><td><strong>Ventas brutas Alibaba</strong> (60 × $3,250 FOB)</td><td>$195,000</td><td>$16,250</td></tr>
+<tr><td class="indent">(−) COGS Voiern (60 × $2,300)</td><td>($138,000)</td><td>($11,500)</td></tr>
+<tr><td class="subtotal">Margen bruto sobre producto</td><td class="subtotal">$57,000</td><td class="subtotal">$4,750</td></tr>
+<tr><td>(+) IVA refund 13% China (60 × $182)</td><td>$10,920</td><td>$910</td></tr>
+<tr><td class="total">MARGEN DISPONIBLE LÍNEA 2</td><td class="total">$67,920</td><td class="total">$5,660</td></tr>
+
+<tr><td colspan="3" style="background:#0d1117;font-weight:600;color:#79c0ff;padding-top:16px">COSTOS DIRECTOS VARIABLES (por máquina)</td></tr>
+<tr><td class="indent">Bot IA hardware (60 × $14)</td><td>($840)</td><td>($70)</td></tr>
+<tr><td class="indent">Mods externos: luces + logo (60 × $30)</td><td>($1,800)</td><td>($150)</td></tr>
+<tr><td class="indent">Manual español + empaque (60 × $13)</td><td>($780)</td><td>($65)</td></tr>
+<tr><td class="indent">Freelance mods L2 (60 × $21)</td><td>($1,260)</td><td>($105)</td></tr>
+<tr><td class="indent">Aduana export LCL (60 × $30)</td><td>($1,800)</td><td>($150)</td></tr>
+<tr><td class="indent">Flete LCL <em>(cliente paga, no es costo CV Tech)</em></td><td>$0</td><td>$0</td></tr>
+<tr><td class="subtotal">Total costos directos L2</td><td class="subtotal">($6,480)</td><td class="subtotal">($540)</td></tr>
+
+<tr><td colspan="3" style="background:#0d1117;font-weight:600;color:#79c0ff;padding-top:16px">OPEX ASIGNADO A L2</td></tr>
+<tr><td class="indent">Alquiler warehouse propio 50-80m² (100% L2)</td><td>($3,000)</td><td>($250)</td></tr>
+<tr><td class="indent">Servicios warehouse (luz, agua, internet)</td><td>($1,200)</td><td>($100)</td></tr>
+<tr><td class="indent">Marketing/Alibaba Gold/WebApp hosting (100% L2)</td><td>($7,500)</td><td>($625)</td></tr>
+<tr><td class="indent">Sebastián salario (50% = $1,000/mes)</td><td>($12,000)</td><td>($1,000)</td></tr>
+<tr><td class="indent">50% Contador básico externo</td><td>($1,800)</td><td>($150)</td></tr>
+<tr><td class="indent">60% Transporte interno China</td><td>($720)</td><td>($60)</td></tr>
+<tr><td class="indent">50% Buffer + visa</td><td>($1,200)</td><td>($100)</td></tr>
+<tr><td class="subtotal">Total OPEX L2</td><td class="subtotal">($27,420)</td><td class="subtotal">($2,285)</td></tr>
+
+<tr><td class="result">🟢 RESULTADO NETO LÍNEA 2</td><td class="result">$34,020</td><td class="result">$2,835</td></tr>
+</table>
+
+<h3>📈 Estado Consolidado CV Tech Año 1</h3>
+<table>
+<tr><th>Concepto</th><th>Línea 1</th><th>Línea 2</th><th><strong>TOTAL</strong></th></tr>
+<tr><td>Ingresos brutos (ventas)</td><td>$379,500</td><td>$195,000</td><td><strong>$574,500</strong></td></tr>
+<tr><td>(−) COGS Voiern</td><td>($345,000)</td><td>($138,000)</td><td>($483,000)</td></tr>
+<tr><td>(+) IVA refund China</td><td>$27,300</td><td>$10,920</td><td>$38,220</td></tr>
+<tr><td><strong>Margen disponible</strong></td><td><strong>$61,800</strong></td><td><strong>$67,920</strong></td><td><strong>$129,720</strong></td></tr>
+<tr><td>(−) Costos directos variables</td><td>($11,250)</td><td>($6,480)</td><td>($17,730)</td></tr>
+<tr><td>(−) OPEX fijos asignados</td><td>($16,440)</td><td>($27,420)</td><td>($43,860)</td></tr>
+<tr style="background:rgba(46,160,67,0.1)"><td><strong>🟢 EBITDA por línea</strong></td><td><strong style="color:#3fb950">$34,110</strong></td><td><strong style="color:#3fb950">$34,020</strong></td><td><strong style="color:#3fb950">$68,130</strong></td></tr>
+<tr><td>Margen sobre ingreso bruto</td><td>9.0%</td><td>17.4%</td><td>11.9%</td></tr>
+</table>
+
+<div class="success-box">
+<strong>EBITDA Año 1: $68,130 ($5,678/mes).</strong> Setup inicial $17,550 se recupera en ~3 meses operativos.
+</div>
+
+<div class="alert-box" style="border-left-color:#d29922;background:rgba(210,153,34,0.08)">
+<strong>⚠️ LECTURA CRÍTICA — el "profit" de Línea 1 es contabilidad interna</strong>
+<p style="margin-top:10px">El margen de Línea 1 que aparece arriba ($34,110) <strong>NO es profit nuevo para el grupo</strong>. Es transferencia entre dos empresas del mismo dueño: CV Tech le cobra $230/máq más a KUY. <strong>Esa plata sale de KUY (mismo grupo) y entra a CV Tech (mismo grupo)</strong> — el grupo consolidado no gana ni pierde con esa transacción.</p>
+<p><strong>El único profit REAL del grupo en Línea 1 viene del IVA refund de China</strong> ($27,300/año), que SÍ es dinero nuevo desde fuera del grupo. El resto del "margen L1" se compensa porque KUY paga más a CV Tech.</p>
+</div>
+
+<h3>🎯 Profit REAL al grupo C4V — la lectura correcta</h3>
+<p>Separemos lo que es transferencia interna vs lo que es ganancia real externa:</p>
+
+<table>
+<tr><th>Fuente de profit</th><th>Tipo</th><th>USD/año</th><th>¿Es plata nueva al grupo?</th></tr>
+<tr><td>Margen L1 venta CV Tech → KUY</td><td>Transferencia interna</td><td>$19,500</td><td>❌ No (KUY paga $19.5K más a CV Tech)</td></tr>
+<tr><td>IVA refund 13% China sobre L1</td><td>Cash gobierno chino</td><td>$27,300</td><td>✅ Sí — plata nueva</td></tr>
+<tr><td>Margen L2 venta a cliente Latam</td><td>Venta externa al grupo</td><td>$57,000</td><td>✅ Sí — cliente externo paga</td></tr>
+<tr><td>IVA refund 13% China sobre L2</td><td>Cash gobierno chino</td><td>$10,920</td><td>✅ Sí — plata nueva</td></tr>
+<tr><td>(−) Costos operativos CV Tech</td><td>Gasto nuevo</td><td>($61,590)</td><td>❌ Gasto que antes no existía</td></tr>
+<tr style="background:rgba(46,160,67,0.1)"><td><strong>🟢 PROFIT REAL AL GRUPO Año 1</strong></td><td></td><td><strong style="color:#3fb950">$53,130</strong></td><td></td></tr>
+</table>
+
+<div class="info-box">
+<strong>Lectura definitiva:</strong>
+<ul style="margin:8px 0 0 24px;line-height:1.9">
+<li><strong>$53,130/año es profit NUEVO al grupo</strong> consolidado C4V con CV Tech operando</li>
+<li>De ese profit: <strong>$57,000 vienen de Línea 2</strong> (venta real a clientes externos en Alibaba)</li>
+<li><strong>$38,220 vienen del IVA refund de China</strong> (plata nueva del gobierno chino)</li>
+<li><strong>Los costos operativos CV Tech ($61,590) los pagamos para acceder a ese profit</strong></li>
+<li><strong>El verdadero motor del negocio es Línea 2.</strong> Sin Línea 2, el grupo solo gana el IVA refund neto ($38K − costos asignables ~$30K) = ~$8K. Bajo, no justifica la operación. <strong>Línea 2 es lo que hace que CV Tech valga la pena.</strong></li>
+</ul>
+</div>
+
+<h3>📊 Profit REAL al grupo — sensibilidad por precio L2</h3>
+<table>
+<tr><th>Precio FOB L2</th><th>Margen L2 nuevo al grupo</th><th>IVA refund total</th><th>(−) Costos operativos</th><th><strong>Profit REAL al grupo</strong></th></tr>
+<tr><td>$2,750</td><td>$27,000</td><td>$38,220</td><td>($61,590)</td><td>$3,630 🟡</td></tr>
+<tr><td>$3,000</td><td>$42,000</td><td>$38,220</td><td>($61,590)</td><td>$18,630</td></tr>
+<tr style="background:rgba(163,113,247,0.1)"><td><strong>$3,250</strong> 🎯</td><td>$57,000</td><td>$38,220</td><td>($61,590)</td><td><strong>$33,630</strong></td></tr>
+<tr><td>$3,500</td><td>$72,000</td><td>$38,220</td><td>($61,590)</td><td>$48,630</td></tr>
+<tr><td>$3,750</td><td>$87,000</td><td>$38,220</td><td>($61,590)</td><td>$63,630</td></tr>
+</table>
+
+<p style="color:#8b949e;font-size:13px"><strong>Nota:</strong> El profit "contable" de CV Tech entidad ($68K a $3,250) refleja la operación interna correctamente. El profit "real al grupo" ($33K a $3,250) refleja el cash flow neto nuevo del grupo consolidado C4V. Las dos lecturas son correctas — una para CV Tech como entidad legal, otra para el grupo como negocio.</p>
+
+<h3>📈 Proyección 3 años (Escenario D, precio $3,250 FOB) — DOS LECTURAS</h3>
+
+<h4>Lectura 1: Profit CV Tech como entidad legal (contable)</h4>
+<table>
+<tr><th>Año</th><th>Vol L1</th><th>Vol L2</th><th>Profit L1 entidad</th><th>Profit L2 entidad</th><th><strong>TOTAL entidad</strong></th></tr>
+<tr><td><strong>Año 1</strong></td><td>150</td><td>60 (5/mes)</td><td>$34,110</td><td>$34,020</td><td><strong>$68,130</strong></td></tr>
+<tr><td><strong>Año 2</strong></td><td>150</td><td>120 (10/mes)</td><td>$34,110</td><td>$87,234</td><td><strong>$121,344</strong></td></tr>
+<tr><td><strong>Año 3</strong></td><td>150</td><td>180 (15/mes)</td><td>$34,110</td><td>$143,190</td><td><strong>$177,300</strong></td></tr>
+<tr style="background:rgba(56,139,253,0.08)"><td colspan="5"><strong>Acumulado 3 años entidad</strong></td><td><strong style="color:#58a6ff">$366,774</strong></td></tr>
+</table>
+
+<h4>Lectura 2: Profit REAL al grupo C4V (lo que importa para invertir)</h4>
+<p style="color:#8b949e;font-size:13px">Descontando la transferencia interna KUY→CV Tech ($19,500/año en L1):</p>
+<table>
+<tr><th>Año</th><th>L2 venta externa</th><th>IVA refund China (L1+L2)</th><th>(−) Costos operativos</th><th><strong>Profit REAL grupo</strong></th></tr>
+<tr><td><strong>Año 1</strong></td><td>$57,000</td><td>$38,220</td><td>($61,590)</td><td><strong style="color:#3fb950">$33,630</strong></td></tr>
+<tr><td><strong>Año 2</strong></td><td>$114,000</td><td>$49,140</td><td>($72,000)</td><td><strong style="color:#3fb950">$91,140</strong></td></tr>
+<tr><td><strong>Año 3</strong></td><td>$171,000</td><td>$60,060</td><td>($82,000)</td><td><strong style="color:#3fb950">$149,060</strong></td></tr>
+<tr style="background:rgba(46,160,67,0.08)"><td colspan="4"><strong>Acumulado 3 años REAL al grupo</strong></td><td><strong style="color:#3fb950">$273,830</strong></td></tr>
+</table>
+
+<div class="info-box">
+<strong>El número que importa para la decisión es $273,830 en 3 años de profit REAL al grupo.</strong> Eso es lo que efectivamente entra como dinero nuevo (Línea 2 venta externa + IVA refund China − costos operativos). Recupera el setup ($17.5K) en ~6 meses.
+</div>
+
+<h3>⚠️ Worst-case análisis (si Línea 2 fracasa al 100%)</h3>
+<div class="warn-box">
+Si vendemos <strong>0 máquinas Línea 2</strong> todo el año:
+<ul style="margin:8px 0 0 24px;line-height:1.9">
+<li>Línea 1 sigue dando: <strong>$34,110</strong></li>
+<li>Costos específicos L2 que NO existirían (marketing, freelance L2, warehouse, etc.): ahorro <strong>$13,800</strong></li>
+<li>Costos warehouse + Sebastián seguiríamos pagando: <strong>−$4,200</strong></li>
+<li><strong style="color:#3fb950">Profit año 1 solo con L1: ~$43,710</strong></li>
+</ul>
+<p style="margin-top:12px"><strong>El piso del negocio es $43K/año aunque Línea 2 fracase completamente.</strong> Eso justifica claramente el setup $17.5K (recupero en 5 meses).</p>
+</div>
+</section>
+
+<!-- PRECIOS -->
+<section id="precios">
+<h2><span class="icon">💲</span><span class="num">7</span>Análisis de precio Línea 2 — sensibilidad</h2>
+<p class="lead">Precio recomendado de salida: <strong>$3,250 FOB</strong> (mismo nivel que Voiern). Tenemos flexibilidad para bajar a $3,000 si hace falta competir o subir a $3,500 si hay demanda.</p>
+
+<h3>📊 Profit Línea 2 por precio FOB (Escenario D)</h3>
+<table>
+<tr><th>Precio FOB</th><th>Margen neto/máq</th><th>Profit Año 1 (60 máq)</th><th>Profit Año 2 (120 máq)</th><th>Profit Año 3 (180 máq)</th></tr>
+<tr><td>$2,750</td><td>$524</td><td>$4,020 🟡 mínimo</td><td>$27,234</td><td>$53,190</td></tr>
+<tr><td>$3,000</td><td>$774</td><td>$19,020 ✅</td><td>$57,234</td><td>$98,190</td></tr>
+<tr style="background:rgba(163,113,247,0.1)"><td><strong>$3,250</strong> 🎯</td><td><strong>$1,024</strong></td><td><strong>$34,020</strong></td><td><strong>$87,234</strong></td><td><strong>$143,190</strong></td></tr>
+<tr><td>$3,500</td><td>$1,274</td><td>$49,020</td><td>$117,234</td><td>$188,190</td></tr>
+<tr><td>$3,750</td><td>$1,524</td><td>$64,020</td><td>$147,234</td><td>$233,190</td></tr>
+<tr><td>$4,000</td><td>$1,774</td><td>$79,020</td><td>$177,234</td><td>$278,190</td></tr>
+</table>
+
+<h3>💵 Profit Consolidado L1+L2 (Escenario D)</h3>
+<table>
+<tr><th>Precio FOB</th><th>Año 1</th><th>Año 2</th><th>Año 3</th><th><strong>Acumulado 3 años</strong></th></tr>
+<tr><td>$2,750</td><td>$38,130</td><td>$61,344</td><td>$87,300</td><td>$186,774</td></tr>
+<tr><td>$3,000</td><td>$53,130</td><td>$91,344</td><td>$132,300</td><td>$276,774</td></tr>
+<tr style="background:rgba(163,113,247,0.1)"><td><strong>$3,250</strong> 🎯</td><td><strong>$68,130</strong></td><td><strong>$121,344</strong></td><td><strong>$177,300</strong></td><td><strong>$366,774</strong></td></tr>
+<tr><td>$3,500</td><td>$83,130</td><td>$151,344</td><td>$222,300</td><td>$456,774</td></tr>
+<tr><td>$3,750</td><td>$98,130</td><td>$181,344</td><td>$267,300</td><td>$546,774</td></tr>
+<tr><td>$4,000</td><td>$113,130</td><td>$211,344</td><td>$312,300</td><td>$636,774</td></tr>
+</table>
+
+<h3>🌎 Cliente final paga (incluye flete + aduana + IVA + despachante)</h3>
+<p>El precio FOB es lo que recibe CV Tech. El cliente paga ese precio + flete + aduana + IVA + despachante. Comparamos contra distribuidor local de cada país:</p>
+
+<table>
+<tr><th>Precio FOB</th><th>🇲🇽 México ($5,400 local)</th><th>🇪🇨 Ecuador ($5,500)</th><th>🇵🇦 Panamá ($6,250)</th><th>🇨🇴 Colombia ($4,800)</th><th>🇨🇱 Chile ($4,200)</th></tr>
+<tr><td>$2,750</td><td>$4,482 ✅ ahorra $918</td><td>$4,709 ✅ ahorra $791</td><td>$4,240 ✅✅ ahorra $2,010</td><td>$5,159 ❌ +$359</td><td>$4,922 ❌ +$722</td></tr>
+<tr><td>$3,000</td><td>$4,772 ✅ ahorra $628</td><td>$5,005 ✅ ahorra $495</td><td>$4,508 ✅✅ ahorra $1,742</td><td>$5,456 ❌ +$656</td><td>$5,220 ❌</td></tr>
+<tr style="background:rgba(163,113,247,0.1)"><td><strong>$3,250</strong> 🎯</td><td><strong>$5,062 ✅ ahorra $338</strong></td><td><strong>$5,299 ✅ ahorra $201</strong></td><td><strong>$4,775 ✅✅ ahorra $1,475</strong></td><td>$5,461 ❌</td><td>$5,219 ❌</td></tr>
+<tr><td>$3,500</td><td>$5,352 🟡 marginal</td><td>$5,603 🟡 +$103</td><td>$5,043 ✅ ahorra $1,207</td><td>$5,769 ❌</td><td>$5,517 ❌</td></tr>
+</table>
+
+<div class="info-box">
+<strong>Mercados realistas a $3,250:</strong> México, Ecuador, Panamá. Colombia y Chile no funcionan en ningún precio (flete + IVA local + precio local bajo). Volumen 5 máq/mes se reparte entre 3 mercados que SÍ son competitivos.
+</div>
+
+<h3>🎯 Por qué $3,250 — la lógica del precio</h3>
+<div class="card">
+<p><strong>Voiern vende su versión a ~$3,250 FOB en Alibaba.</strong> Si vendemos al MISMO precio, eliminamos la guerra de precios y competimos solo en valor agregado:</p>
+<ul style="margin:8px 0 0 24px;line-height:1.9">
+<li><strong>Marca C4V</strong> — 1,500 unidades vendidas + redes activas en TikTok (54.9K seguidores)</li>
+<li><strong>Soporte español</strong> — Zoom 24h con equipo Latam (Josafat, Gerson, Aldo, Gustavo)</li>
+<li><strong>WebApp C4V Assistant</strong> — único diferencial digital exclusivo C4V</li>
+<li><strong>Manual + capacitación</strong> en español + C4V School</li>
+<li><strong>Conocimiento del mercado latino</strong> — sabemos qué productos hacen, los chinos no</li>
+</ul>
+<p style="margin-top:12px"><strong>Mismo precio + más valor = mejor relación valor/precio.</strong> El cliente que sabe que existe Voiern pero no lo conoce, prefiere C4V por la confianza y el soporte.</p>
+</div>
+</section>
+
+<!-- VALOR PERCIBIDO -->
+<section id="vp">
+<h2><span class="icon">🎯</span><span class="num">8</span>Valor Percibido — VP por escenario</h2>
+<p class="lead">El cliente latino decide por valor percibido (no solo precio). VP = Beneficios ÷ Costos totales.</p>
+
+<h3>Score por componente (escala 1-10) — vs distribuidor local</h3>
+<table>
+<tr><th>Componente</th><th>Local</th><th>Escenario A</th><th>Escenario B</th><th>Escenario C</th><th>Escenario D</th></tr>
+<tr><td>Producto técnico</td><td>7</td><td>8 (mods)</td><td>7 (sin mods)</td><td>7 (sin mods)</td><td>8 (mods)</td></tr>
+<tr><td>Marca C4V</td><td>6</td><td>8</td><td>8</td><td>8</td><td>8</td></tr>
+<tr><td>Soporte (canal + 24h)</td><td>8 (presencial)</td><td>7 (Zoom)</td><td>7 (Zoom)</td><td>7 (Zoom)</td><td>7 (Zoom)</td></tr>
+<tr><td>Testimoniales del país</td><td>7</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td>Conocimiento mercado latino</td><td>8</td><td>9</td><td>9</td><td>9</td><td>9</td></tr>
+<tr><td>WebApp C4V Assistant</td><td>0</td><td>9</td><td>9</td><td>9</td><td>9</td></tr>
+<tr><td>Tiempo espera (10=rápido)</td><td>9</td><td>3</td><td>3</td><td><strong>8</strong></td><td>3</td></tr>
+<tr><td>Esfuerzo importar (10=poco)</td><td>9</td><td>4</td><td>4</td><td><strong>7</strong></td><td>4</td></tr>
+<tr><td>Miedo (10=tranquilo)</td><td>8</td><td>6</td><td>6</td><td>7</td><td>6</td></tr>
+</table>
+
+<h3>VP final por precio y escenario (vs local 2.53)</h3>
+<table>
+<tr><th>Precio FOB</th><th>VP local</th><th>VP Esc A</th><th>VP Esc B</th><th>VP Esc C</th><th>VP Esc D</th></tr>
+<tr style="background:rgba(163,113,247,0.05)"><td><strong>$3,250</strong> 🎯</td><td>2.53</td><td>1.49 ❌</td><td>1.46 ❌</td><td><strong>2.22 🟡</strong></td><td>1.52 ❌</td></tr>
+<tr><td>$3,000</td><td>2.53</td><td>1.56 ❌</td><td>1.52 ❌</td><td><strong>2.40 🟡</strong></td><td>1.58 ❌</td></tr>
+<tr><td>$2,750</td><td>2.53</td><td>1.62 ❌</td><td>1.59 ❌</td><td><strong>2.59 ✅</strong></td><td>1.65 ❌</td></tr>
+</table>
+
+<div class="info-box">
+<strong>Lectura clave del VP:</strong> En valor percibido puro, <strong>solo Escenario C vence al distribuidor local</strong> (por el tiempo de entrega 5-12 días). Los escenarios A, B y D pierden en VP por el tiempo de espera 35-45 días.
+<br><br>
+<strong>Pero el VP no es el único factor.</strong> Si el cliente AHORRA suficiente plata (>$1,000 según tu data), está dispuesto a esperar. A $3,250 ahorra $338-$1,475 según país — para muchos clientes vale la espera.
+</div>
+</section>
+
+<!-- CASOS REFERENCIALES -->
+<section id="casos">
+<h2><span class="icon">🌐</span><span class="num">9</span>Cómo lo hicieron otras empresas chinas</h2>
+
+<table>
+<tr><th>Empresa</th><th>Cómo arrancaron</th><th>Lección</th></tr>
+<tr><td><strong>Anker</strong></td><td>Venta directa Amazon US desde Shenzhen (Modelo Lite). Warehouse US con $500K/mes ventas (3 años después)</td><td>Validar mercado antes de fierros</td></tr>
+<tr><td><strong>Xiaomi</strong></td><td>Solo China primero. India directo con distribuidor local. Hubs regionales después de 6 años</td><td>Hub regional > warehouse propio</td></tr>
+<tr><td><strong>Tuya Smart</strong></td><td>0 oficinas fuera China hasta tener $50M revenue</td><td>Capital en marketing primero</td></tr>
+<tr><td><strong>Insta360</strong></td><td>Venta directa desde China con stock 3PL años. Office USA con $100M facturación</td><td>Lean approach es estándar</td></tr>
+<tr><td><strong>Naturehike</strong></td><td>Lite con 3PL Asia → Hub europeo (modelo C) → ANTES de warehouse propio</td><td>C antes que A</td></tr>
+<tr><td><strong>OnePlus</strong></td><td>Lite 4 años. Hubs regionales después. Warehouse propio solo India</td><td>Mismo patrón</td></tr>
+</table>
+
+<div class="success-box">
+<strong>El patrón claro:</strong> Modelo Lite → Hub regional → Warehouse propio destino. <strong>NADIE arranca con warehouse propio en origen.</strong> Por eso D (warehouse mini con costo bajo) o C (hub Panamá) son los caminos validados internacionalmente.
+</div>
+</section>
+
+<!-- SERVICIO TÉCNICO -->
+<section id="servicio">
+<h2><span class="icon">🛠️</span><span class="num">10</span>Servicio técnico Perú — proyecto paralelo</h2>
+<p class="lead">Proyecto separado de CV Tech. Objetivo: <strong>control y reputación, no revenue inicial</strong>.</p>
+
+<div class="warn-box">
+<strong>Realidad del mercado (data verificada):</strong> 100-300 servicios técnicos láser por mes en TODO Perú. Parque instalado ~3-6K máquinas. 0 empresas peruanas dedicadas 100% a servicio técnico. NADIE publica precios. Mercado inmaduro.
+</div>
+
+<h3>Modelo recomendado — gratis Años 1-2, monetización Año 3+</h3>
+<table>
+<tr><th>Año</th><th>Modelo</th><th>Costo C4V</th><th>Por qué</th></tr>
+<tr><td>Año 1-2</td><td>Plataforma 100% gratis. Página web con tarifas públicas + WhatsApp Business. Ingenieros internos atienden con bendición C4V (cobran ellos al cliente). C4V monitorea calidad.</td><td>$200/mes</td><td>Crear hábito + control marca</td></tr>
+<tr><td>Año 3</td><td>Lanzamiento Plan C4V Care (suscripción tipo AppleCare). Mantenimientos recurrentes incluidos.</td><td>$5K marketing</td><td>Monetización ecosistema</td></tr>
+<tr><td>Año 4+</td><td>Repuestos premium, certificación pagada, leads premium</td><td>Self-sustaining</td><td>Plataforma escala</td></tr>
+</table>
+
+<h3>Casos: apps que esperaron años en monetizar</h3>
+<table>
+<tr><th>App</th><th>Años gratis</th><th>Después</th></tr>
+<tr><td>WhatsApp</td><td>5 años</td><td>Business + Pay</td></tr>
+<tr><td>Discord</td><td>2 años</td><td>Nitro</td></tr>
+<tr><td>Notion</td><td>4 años</td><td>Teams + Enterprise</td></tr>
+<tr><td>Calendly</td><td>5 años</td><td>Teams + Premium</td></tr>
+<tr><td>Canva</td><td>6 años</td><td>Pro + Teams</td></tr>
+</table>
+
+<h3>Plan C4V Care (Año 3+) — proyección revenue</h3>
+<table>
+<tr><th>Plan</th><th>Precio anual</th><th>Incluye</th></tr>
+<tr><td><strong>Basic</strong></td><td>$80</td><td>1 visita preventiva + 10% descuento repuestos + WhatsApp prioritario</td></tr>
+<tr><td><strong>Plus</strong></td><td>$150</td><td>2 visitas + 20% descuento + garantía extendida 24 meses</td></tr>
+<tr><td><strong>Pro</strong></td><td>$250</td><td>4 visitas trimestrales + 30% descuento + garantía 36 meses + máquina backup</td></tr>
+</table>
+<p><strong>Año 3:</strong> 25% × 1,500 clientes × $120 promedio = <strong>$45,000/año revenue recurrente</strong> con margen ~55%.</p>
+</section>
+
+<!-- PLAN DE PAGOS -->
+<section id="pagos">
+<h2><span class="icon">💵</span><span class="num">11</span>Plan de pagos y financiamiento</h2>
+<p class="lead">El <strong>buffer operación sale del capital de Irene (venta casa Nereida)</strong>, NO del flujo C4V.</p>
+
+<h3>3 escenarios de financiamiento</h3>
+
+<div class="card-grid">
+
+<div class="card">
+<h4 style="color:#3fb950">A) Autofinanciado</h4>
+<p style="font-size:13px;color:#8b949e">Setup desde utilidades C4V + buffer de Irene</p>
+<table style="font-size:13px">
+<tr><td>Setup tramos</td><td>Utilidades C4V</td></tr>
+<tr><td>Buffer operación</td><td>Capital Irene</td></tr>
+<tr><td>Cuotas/intereses</td><td>$0</td></tr>
+<tr><td>Mejor para</td><td>Escenario B y D (capital bajo)</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h4 style="color:#58a6ff">B) Préstamo bancario + capital Irene</h4>
+<p style="font-size:13px;color:#8b949e">Préstamo BBVA/BCP solo para setup, buffer de Irene</p>
+<table style="font-size:13px">
+<tr><td>Setup</td><td>Préstamo 24 meses</td></tr>
+<tr><td>Buffer operación</td><td>Capital Irene</td></tr>
+<tr><td>Cuota mensual</td><td>$870 (D) – $2,580 (A)</td></tr>
+<tr><td>Mejor para</td><td>No tocar caja C4V</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h4 style="color:#a371f7">C) Mixto (recomendado para D)</h4>
+<p style="font-size:13px;color:#8b949e">$10K iniciales personales/utilidades, resto con operación</p>
+<table style="font-size:13px">
+<tr><td>Tramo 1 ($10K)</td><td>Aporte mío + utilidades</td></tr>
+<tr><td>Tramo 2-3</td><td>IVA refund Línea 1 (ingreso desde mes 1)</td></tr>
+<tr><td>Buffer operación</td><td>Capital Irene reservado</td></tr>
+<tr><td>Mejor para</td><td>Escenario D — mínimo desembolso</td></tr>
+</table>
+</div>
+
+</div>
+
+<h3>Setup detallado Escenario D</h3>
+<table>
+<tr><th>Concepto</th><th>USD</th><th>Cuándo se paga</th></tr>
+<tr><td>Trámites legales WFOE</td><td>$1,000</td><td>Semana 1</td></tr>
+<tr><td>Depósito warehouse 50-80m² (押二付一)</td><td>$750</td><td>Semana 2</td></tr>
+<tr><td>Equipamiento básico (mesa, herramientas)</td><td>$4,000</td><td>Mes 1</td></tr>
+<tr><td>Sistema inventario simple</td><td>$1,500</td><td>Mes 1</td></tr>
+<tr><td>Depósito vivienda Sebastián Huangdao</td><td>$2,300</td><td>Semana 2</td></tr>
+<tr><td>Alibaba Gold Supplier (1er año)</td><td>$4,000</td><td>Mes 1</td></tr>
+<tr><td>WebApp C4V Assistant desarrollo</td><td>$4,000</td><td>Mes 1-2</td></tr>
+<tr><td>Buffer operación (capital Irene, NO se gasta)</td><td>$10,000</td><td>Reservado</td></tr>
+<tr style="background:rgba(46,160,67,0.05)"><td><strong>TOTAL setup</strong></td><td><strong>$27,550</strong></td><td></td></tr>
+<tr style="background:rgba(56,139,253,0.05)"><td><strong>Cash real (sin buffer Irene)</strong></td><td><strong>$17,550</strong></td><td></td></tr>
+</table>
+</section>
+
+<!-- RIESGOS -->
+<section id="riesgos">
+<h2><span class="icon">⚠️</span><span class="num">12</span>Riesgos por escenario</h2>
+
+<table>
+<tr><th>Riesgo</th><th>A</th><th>B</th><th>C</th><th>D</th><th>Mitigación</th></tr>
+<tr><td>Voiern compite Alibaba con $2,800</td><td>🟢 mods</td><td>🔴</td><td>🟡</td><td>🟢 mods</td><td>WebApp + marca C4V</td></tr>
+<tr><td>Ventas <3 máq/mes a 6 meses</td><td>🔴 $96K perdido</td><td>🟢 $18K</td><td>🟡 $27K + stock</td><td>🟢 $22K</td><td>Plan B: solo Línea 1</td></tr>
+<tr><td>Personal China renuncia</td><td>🔴</td><td>🟢 N/A</td><td>🟢 N/A</td><td>🟢 freelance</td><td>BOSS直聘 + agencia</td></tr>
+<tr><td>QC externo falla calidad</td><td>🟢 yo controlo</td><td>🔴</td><td>🔴</td><td>🟢 yo controlo</td><td>QC con seguro responsabilidad</td></tr>
+<tr><td>Sebastián no adapta China</td><td>🔴 desarma</td><td>🟢 N/A</td><td>🟢 N/A</td><td>🟡 trial 3m</td><td>Contrato warehouse mensual primero</td></tr>
+<tr><td>Cambio TLC o IVA refund</td><td>🟡</td><td>🟡</td><td>🟡</td><td>🟡</td><td>Monitoreo legal</td></tr>
+<tr><td>Robo/fraude ZLC Panamá</td><td>🟢 N/A</td><td>🟢 N/A</td><td>🔴 $25K stock</td><td>🟢 N/A</td><td>Seguro + warehouse Tier 1</td></tr>
+<tr><td>Contenedor parado por baja venta</td><td>🟢 N/A</td><td>🟢 N/A</td><td>🔴</td><td>🟢 N/A</td><td>FCL flexible — esperar volumen</td></tr>
+</table>
+
+<h3>Worst-case absoluto por escenario</h3>
+<div class="alert-box">
+<table style="background:transparent">
+<tr><th>Escenario</th><th>Worst-case</th><th>Concepto</th></tr>
+<tr><td>A</td><td>$130,000</td><td>Setup + 12 meses operación a pérdida + indemnizaciones staff</td></tr>
+<tr><td>B</td><td>$40,000</td><td>Setup + 12 meses operación sin ventas L2</td></tr>
+<tr><td>C</td><td>$60,000</td><td>Setup + stock parado Panamá + 12 meses operación</td></tr>
+<tr><td>D</td><td>$30,000</td><td>Setup + 12 meses operación + cancelación contrato warehouse</td></tr>
+</table>
+</div>
+</section>
+
+<!-- LO QUE PIDO -->
+<section id="pido">
+<h2><span class="icon">🤝</span><span class="num">13</span>Lo que les pido al board</h2>
+
+<div class="decision-box">
+<h4>Decisión 1 — Elegir escenario</h4>
+<p style="font-size:16px">¿Cuál arrancamos: <strong>A / B / C / D</strong>?</p>
+<p style="color:#8b949e;font-size:13px;margin-top:8px"><strong>Mi recomendación:</strong> Escenario D. Combina la mayor profit año 1 ($68K), inversión moderada ($17.5K), riesgo bajo ($30K worst-case), mods completos como diferencial real, y mantiene mi presencia en China para construir relación Voiern.</p>
+</div>
+
+<div class="decision-box">
+<h4>Decisión 2 — Precio Línea 2</h4>
+<p style="font-size:16px">Sugerencia: <strong>$3,250 FOB</strong> (mismo nivel que Voiern). Flex para bajar a $3,000.</p>
+<p style="color:#8b949e;font-size:13px;margin-top:8px">A este precio competimos por valor (marca + WebApp + soporte español) no por precio bajo. Cliente final ahorra $338-$1,475 según país.</p>
+</div>
+
+<div class="decision-box">
+<h4>Decisión 3 — Financiamiento</h4>
+<p style="font-size:16px">¿Mixto / Autofinanciado / Préstamo?</p>
+<p style="color:#8b949e;font-size:13px;margin-top:8px">Recomendado: Mixto. $10K iniciales personal/utilidades + buffer Irene reservado. IVA refund cubre tramos siguientes.</p>
+</div>
+
+<h3>Qué le pido a cada uno</h3>
+<table>
+<tr><th>Persona</th><th>Qué le pido</th></tr>
+<tr><td><strong>Jose</strong></td><td>Mirada financiera del plan + confirmar plan sede Chile + decidir si CV Tech entra ya o esperamos capital</td></tr>
+<tr><td><strong>Irene</strong></td><td>Confirmar capital Irene para buffer + mirada comercial sobre soporte Latam desde Lima</td></tr>
+<tr><td><strong>Jair</strong></td><td>Coordinación marketing/equipo creativo para WebApp + videos Alibaba en español</td></tr>
+</table>
+
+<h3>Cosas que NO necesito que decidan hoy</h3>
+<ul style="margin-left:24px;color:#c9d1d9;line-height:1.9">
+<li>Qué warehouse mini específico alquilo (ya tengo 3 candidatos)</li>
+<li>Qué empresa de QC contrato (Jose tiene contactos)</li>
+<li>Qué freelance contrato (BOSS直聘 ya identificado)</li>
+<li>Detalles operativos día a día</li>
+<li>Desarrollo WebApp C4V Assistant (coordino con equipo)</li>
+</ul>
+
+<div class="success-box">
+<strong>Mi compromiso:</strong> con las 3 decisiones aprobadas, en 45 días cerramos primera venta Línea 2 con cliente real. Reporto cada 2 semanas con números reales.
+</div>
+</section>
+
+<!-- ANEXOS -->
+<h2 style="margin-top:96px;color:#8b949e;font-weight:400;font-size:18px;text-transform:uppercase;letter-spacing:2px;border-bottom:none">📂 Anexos técnicos</h2>
+
+<section id="anexo-cadena">
+<h2><span class="icon">🔗</span>Anexo A — Cadena suministro por escenario</h2>
+
+<h3>Escenario A / D (con warehouse propio China)</h3>
+<div class="card">
+<p style="font-family:monospace;color:#79c0ff;font-size:13px;line-height:1.8">
+Good Laser (Shenzhen) / Muyong (Foshan) → Warehouse propio Yantian (Shenzhen). [Ref histórica: antes Voiern Liaocheng]<br>
+→ Mods (bot IA + luces + logo + manual) + Inspección<br>
+→ FOB Qingdao → LCL (cliente paga flete) → Puerto destino<br>
+→ Cliente desaduana → Soporte Zoom Lima
+</p>
+</div>
+
+<h3>Escenario B (3PL Qingdao sin mods)</h3>
+<div class="card">
+<p style="font-family:monospace;color:#79c0ff;font-size:13px;line-height:1.8">
+Voiern → QC empresa externa en fábrica → 3PL Qingdao<br>
+→ FOB Qingdao → LCL → Puerto destino<br>
+→ Cliente desaduana → Soporte Zoom Lima
+</p>
+</div>
+
+<h3>Escenario C (Hub Panamá)</h3>
+<div class="card">
+<p style="font-family:monospace;color:#79c0ff;font-size:13px;line-height:1.8">
+Voiern → QC fábrica → 3PL Qingdao → FCL Qingdao→Panamá<br>
+→ ZLC Panamá (bond, sin aranceles) → 3PL Panamá<br>
+→ Despacho rápido (5-12 días) → Cliente desaduana destino<br>
+→ Soporte Zoom Lima
+</p>
+</div>
+</section>
+
+<section id="anexo-mercados">
+<h2><span class="icon">🌎</span>Anexo B — Mercados y fletes LCL</h2>
+<table>
+<tr><th>País</th><th>Puerto</th><th>Flete LCL all-in (verificado)</th><th>Tránsito</th><th>Precio local (verificado)</th></tr>
+<tr><td>🇲🇽 México</td><td>Manzanillo</td><td>$769</td><td>22-28 días</td><td>$5,400</td></tr>
+<tr><td>🇵🇦 Panamá</td><td>Balboa</td><td>$839</td><td>25-30 días</td><td>$6,250</td></tr>
+<tr><td>🇪🇨 Ecuador</td><td>Guayaquil</td><td>$915</td><td>28-35 días</td><td>$5,500</td></tr>
+<tr><td>🇨🇴 Colombia</td><td>Buenaventura</td><td>$1,249</td><td>30-38 días</td><td>$4,800</td></tr>
+<tr><td>🇨🇱 Chile</td><td>Valparaíso</td><td>$1,050</td><td>40-45 días</td><td>$4,200</td></tr>
+<tr><td>🇦🇷 Argentina</td><td>Buenos Aires</td><td>$1,400</td><td>50-58 días</td><td>$5,500 ⚠️ excedente</td></tr>
+</table>
+<p style="color:#8b949e;font-size:13px">Fletes verificados mayo 2026. Precios locales: distribuidores verificados (Color Make, Importecol, TodoCortes, Produmaquinas, Graphic Supply).</p>
+</section>
+
+<section id="anexo-calendario">
+<h2><span class="icon">📅</span>Anexo C — Calendario China 2026</h2>
+<table>
+<tr><th>Fecha</th><th>Evento</th><th>Impacto</th></tr>
+<tr><td>15-23 febrero</td><td>🧧 Spring Festival</td><td>9 días feriados. Producción Voiern ralentizada 2-3 sem antes/después. NO embarcar.</td></tr>
+<tr><td>1-7 octubre</td><td>🇨🇳 Golden Week</td><td>7 días feriados. Aduana paralizada. NO embarcar.</td></tr>
+<tr><td>4 ene (dom) · 14 feb (sáb) · 28 feb (sáb) · 20 sep (dom) · 10 oct (sáb)</td><td>📅 Días "make-up" (laborables)</td><td>China trabaja estos fines de semana para compensar feriados. Fábricas y aduana SÍ operan.</td></tr>
+</table>
+</section>
+
+<section id="anexo-contactos">
+<h2><span class="icon">📞</span>Anexo D — Contactos verificados</h2>
+<h3>Contadores WFOE Shenzhen</h3>
+<ul style="margin-left:24px;color:#c9d1d9;line-height:1.9">
+<li>博文信达 Shenzhen (Mei investiga · 15+ años WFOE)</li>
+<li>深圳聚正会计 (más económico, Shenzhen) — pendiente confirmar contactos Mei</li>
+</ul>
+<h3>Forwarders / fletes LCL</h3>
+<ul style="margin-left:24px;color:#c9d1d9;line-height:1.9">
+<li>Flexport — visibilidad y tracking</li>
+<li>Sino Shipping — info@sino-shipping.com</li>
+<li>Latin American Cargo — sales@latinamericancargo.com</li>
+<li>Seabridge Link (Antuane Rivera, ya conocida por C4V)</li>
+</ul>
+<h3>Warehouse mini Yantian (Shenzhen)</h3>
+<ul style="margin-left:24px;color:#c9d1d9;line-height:1.9">
+<li>Listings concretos pendientes (Mei bloqueada por anti-scraping 58.com — workaround: WeChat directo + grupos expat)</li>
+<li>Sub-zonas Yantian sugeridas: cerca Yantian Modern Logistics Center, Yantian Integrated FTZ, GLP International Logistics Park</li>
+<li>Rango precio: RMB 6,500-9,000/mes para 100-200m² (vs RMB 10,000 que era plan Qingdao)</li>
+</ul>
+<h3>Freelance técnicos Shenzhen (pendiente investigación post-decisión warehouse)</h3>
+<ul style="margin-left:24px;color:#c9d1d9;line-height:1.9">
+<li>BOSS直聘 (mejor calidad)</li>
+<li>鱼泡网 (operarios calificados)</li>
+<li>Staff augmentation: 祥洱汇 / 终成乾合</li>
+</ul>
+<h3>Empresas QC en fábrica Voiern</h3>
+<p>Jose tiene contactos previos. Pendiente confirmar nombre + cotización.</p>
+</section>
+
+
+<section id="anexo-shenzhen">
+<h2><span class="icon">🔄</span>Anexo E — Actualización pivote Shenzhen (25-may-2026)</h2>
+<p style="color:#8b949e;font-size:14px;margin-bottom:16px">Estado completo del proyecto post-pivote. Esta sección agrega/sobrescribe info del análisis original donde aplique.</p>
+
+<h3>🏦 Estado de la WFOE</h3>
+<table>
+<tr><th>Item</th><th>Status</th></tr>
+<tr><td>Business License</td><td>✅ Emitida en Shenzhen</td></tr>
+<tr><td>Banco CNY · Ping An Nanshan</td><td>✅ Abierta</td></tr>
+<tr><td>Banco USD · Ping An Nanshan</td><td>🟡 En trámite (KYC bancario 4-8 sem)</td></tr>
+<tr><td>SAFE Foreign Exchange registration</td><td>✅ Automático vía Ping An (no requiere trámite separado)</td></tr>
+<tr><td>Capital social registrado</td><td>❌ Aún no pagado — <strong>riesgo legal pendiente verificar plazo</strong> (típico 5 años o lo declarado en estatutos)</td></tr>
+<tr><td>Online banking corporativo</td><td>❌ Por activar (pedir USB key/token en próxima visita)</td></tr>
+</table>
+
+<h3>🚚 Proveedores en evaluación (cambio total vs plan original)</h3>
+<table>
+<tr><th>Proveedor</th><th>Ubicación</th><th>Producto / Diferenciador</th><th>Status</th></tr>
+<tr><td><strong>Good Laser</strong></td><td>Shenzhen</td><td>CCD posicionamiento (USP fuerte)</td><td>Prueba en curso · resultado miércoles 27-may</td></tr>
+<tr><td><strong>Muyong</strong> (佛山市迈扬激光科技)</td><td>Foshan (100km, 1.5h tren)</td><td>Máquina 2000 mm/s velocidad</td><td>Reunión Sebas martes 26-may 9am</td></tr>
+<tr><td style="color:#8b949e">Voiern (referencia anterior)</td><td style="color:#8b949e">Liaocheng (Shandong)</td><td style="color:#8b949e">$3,250 FOB en Alibaba</td><td style="color:#8b949e">Queda como referencia de precio mercado</td></tr>
+</table>
+<p style="color:#8b949e;font-size:13px;margin-top:8px">El precio FOB referencia <strong>$3,250</strong> sigue válido (es el precio Voiern en Alibaba, contra el que competimos por valor agregado).</p>
+
+<h3>🌏 Reportes Mei consolidados (25-may)</h3>
+<table>
+<tr><th>Área</th><th>Recomendación Mei</th><th>Decisión Sebas</th></tr>
+<tr><td>Warehouse</td><td>Yantian (盐田) 9.5/10 · cerca puerto · FTZ disponible · ahorra RMB 1,500-3,000/mes vs alternativas (incluida Humen)</td><td>✅ Confirmado</td></tr>
+<tr><td>Vivienda Sebas</td><td>Shekou (Nanshan) 9.4/10 · comunidad expat · Sea World · ferry HK 30min</td><td>✅ Confirmado</td></tr>
+<tr><td>Puerto export</td><td>Yantian · 3-4 salidas/mes a Callao vs 1-2 Shekou · ecosistema LCL especializado LATAM</td><td>✅ Confirmado</td></tr>
+<tr><td>SAFE registration</td><td>Auto vía Ping An (no requiere trámite separado)</td><td>✅ Confirmado</td></tr>
+</table>
+
+<h3>💲 Precios actualizados (datos verificados Mei, base Yantian)</h3>
+<table>
+<tr><th>Item</th><th>Plan original (Qingdao)</th><th>Shenzhen actual</th><th>Delta</th></tr>
+<tr><td>Alquiler warehouse 100-200m²</td><td>RMB 2,460 (200m²) / 10,000 (800m²)</td><td><strong>RMB 6,500-9,000 (100-200m²)</strong></td><td>⬆️ Similar (Yantian ofrece FTZ + cercanía puerto)</td></tr>
+<tr><td>Alquiler vivienda Sebas</td><td>RMB 2,000-3,000 (Lingshanwei Huangdao)</td><td><strong>RMB 10,000-25,000 (Shekou)</strong></td><td>⬆️ +200-400% (premium internacional)</td></tr>
+<tr><td>Depósitos (押二付三)</td><td>5 meses adelantado</td><td>5 meses adelantado</td><td>=</td></tr>
+<tr><td>LCL Yantian → Callao</td><td>USD 140-200 estimado (Qingdao)</td><td><strong>USD 150-300/máq</strong> (BETTERluck/SEKO estimado)</td><td>≈ similar</td></tr>
+<tr><td>Freelance Shenzhen</td><td>n/a en plan original</td><td><strong>RMB 4,000-8,000/mes</strong></td><td>🆕 nuevo costo</td></tr>
+<tr><td>Capital social Ping An</td><td>n/a</td><td>Pendiente confirmar monto</td><td>🆕 trámite urgente</td></tr>
+</table>
+<div style="background:rgba(255,213,0,0.08);border-left:4px solid #ffd700;padding:12px 16px;border-radius:4px;margin-top:14px;color:#c9d1d9">
+<strong>Impacto en math:</strong> los 4 escenarios proyectaron costos base Qingdao $108K/año. Con Shenzhen los costos suben ~30-55% por alquileres premium (warehouse + vivienda). Esto reduce el profit año 1 del Escenario D de <strong>$137K → ~$95-115K</strong>. La sinergia Yantian (warehouse) + Shekou (vivienda) + Yantian (puerto) sigue justificando el costo extra: cero fricción logística + lifestyle internacional + acceso HK.
+</div>
+
+<h3>📋 Decisiones pendientes priorizadas</h3>
+<table>
+<tr><th>#</th><th>Decisión</th><th>Owner</th><th>Status</th></tr>
+<tr><td>1</td><td>Verificar plazo pago capital social Ping An (riesgo legal)</td><td>Sebas + agente legal</td><td>🔴 Crítico esta semana</td></tr>
+<tr><td>2</td><td>Selección proveedor primario Good Laser vs Muyong</td><td>Sebas</td><td>🟡 Post reunión Muyong (mar) + Good Laser (mie)</td></tr>
+<tr><td>3</td><td>Aceptar gap cash flow Shenzhen vs target, o ajustar vivienda</td><td>Sebas</td><td>🟡 Esta semana</td></tr>
+<tr><td>4</td><td>Listings concretos warehouse Yantian (Mei bloqueada por anti-scraping, workaround manual)</td><td>Sebas + Mei</td><td>🟢 En curso</td></tr>
+<tr><td>5</td><td>Listings apartamentos Shekou (mismo workaround)</td><td>Sebas + Mei</td><td>🟢 En curso</td></tr>
+<tr><td>6</td><td>Activar online banking Ping An corporativo</td><td>Sebas</td><td>🟢 Próxima visita Nanshan</td></tr>
+<tr><td>7</td><td>Cotización formal LCL · BETTERluck + SEKO</td><td>Sebas + Director</td><td>🟢 Pendiente armar emails</td></tr>
+<tr><td>8</td><td>Contratar freelance Shenzhen</td><td>Sebas</td><td>🟢 Post setup warehouse</td></tr>
+</table>
+
+<h3>📅 Calendario inmediato</h3>
+<table>
+<tr><th>Fecha</th><th>Evento</th></tr>
+<tr><td><strong>Mar 26-may 9am</strong></td><td>🚚 Reunión Muyong en Foshan · validar máquina 2000mm/s · brief listo (docs/brief_muyong_martes_2026-05-26.md)</td></tr>
+<tr><td><strong>Mié 27-may</strong></td><td>🧪 Resultado prueba CCD posicionamiento Good Laser</td></tr>
+<tr><td>Esta semana</td><td>Verificar plazo capital social con agente legal · iniciar trámite si urgente</td></tr>
+<tr><td>Próx 48h</td><td>Listings concretos warehouse Yantian + apartamentos Shekou (workaround Mei)</td></tr>
+</table>
+
+<h3>🌎 Fletes LCL desde Yantian (validado por Mei vs Qingdao original)</h3>
+<table>
+<tr><th>Ruta</th><th>Frecuencia</th><th>Tránsito</th><th>Forwarders recomendados</th></tr>
+<tr><td>Yantian → Callao</td><td>3-4 salidas/mes (MSC, ONE, OOCL)</td><td>32-37 días</td><td>BETTERluck Shipping, SEKO Logistics, Huanhaisz</td></tr>
+<tr><td>Yantian → Buenaventura</td><td>2-3 salidas/mes</td><td>35-40 días</td><td>BETTERluck, SEKO</td></tr>
+</table>
+<p style="color:#8b949e;font-size:13px;margin-top:8px">Yantian concentra 60-70% salidas LCL Shenzhen-LATAM. Costo LCL: USD 50-184/m³ Shenzhen → Callao (varía con recargos). HS Code máquina láser CO2: <code style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:3px;color:#a371f7">8456.11.00</code>. Incoterm: FOB Yantian.</p>
+
+<h3>🚨 Bloqueantes activos</h3>
+<ul style="margin-left:24px;color:#c9d1d9;line-height:1.9">
+<li><strong>Capital social pago Ping An:</strong> sin pagar en plazo, WFOE deslistable. Verificar urgente con agente legal.</li>
+<li><strong>Mei anti-scraping:</strong> sitios chinos (58.com, Lianjia, 贝壳找房) bloquean scraping automatizado. Para listings concretos: Sebas con WeChat manual, post en grupos expat, o contratar agente real estate ~50% comisión primer mes.</li>
+<li><strong>Online banking Ping An sin activar:</strong> cada transferencia requiere visita presencial a sucursal Nanshan.</li>
+</ul>
+
+</section>
+
+
+<section id="anexo-setup">
+<h2><span class="icon">⚙️</span>Anexo E — Setup legal, fiscal y organizacional</h2>
+<p class="lead">Material consolidado del análisis operativo v4 (mayo 2026), adaptado a la operación Shenzhen. Es la mecánica práctica detrás del modelo financiero.</p>
+
+<h3>🏛️ Estructura legal del grupo en China</h3>
+<table>
+<tr><th>Empresa</th><th>Tipo</th><th>Ubicación</th><th>Estado</th><th>Propósito</th></tr>
+<tr><td><strong>CV Technology</strong></td><td>WFOE 100% Sebastián</td><td>Shenzhen</td><td><span class="badge yellow">Business License emitida · capital social pendiente</span></td><td>Trading + Export Latam</td></tr>
+<tr><td>JCS Technology</td><td>WFOE</td><td>Shenzhen</td><td><span class="badge green">Operativa</span></td><td>Holding familiar (socios JCS partners)</td></tr>
+</table>
+<p style="color:#8b949e;font-size:13px">Ventaja del pivote a Shenzhen: warehouse y WFOE en la misma ciudad — ya no se necesita el registro de dirección (经营场所备案) en otra provincia que requería el plan Qingdao.</p>
+
+<h3>🏦 Banking — estructura de cuentas Ping An</h3>
+<div class="card">
+<p><strong>Cuenta única: Ping An Bank (sucursal Nanshan)</strong> con dos sub-cuentas:</p>
+<ul style="margin-left:24px;color:#c9d1d9;line-height:1.9">
+<li><strong>FDI Account</strong> — recibe el capital extranjero de Sebastián (aporte de capital social)</li>
+<li><strong>FTN Account</strong> (Free Trade Non-resident) — USD/CNY libre, sin restricciones de capital controls</li>
+</ul>
+<p style="color:#8b949e;font-size:13px;margin-top:8px">Sin cuenta Singapore por ahora — se agrega solo si se requiere flexibilidad de cash flow internacional.</p>
+</div>
+
+<h3>🧾 Sistema fiscal China (mecánica del IVA refund)</h3>
+<table>
+<tr><th>Aspecto</th><th>Detalle</th></tr>
+<tr><td>Facturación electrónica (Fapiao)</td><td>Sistema <strong>GRATIS</strong> del 税务局 (suficiente para WFOE pequeña). Opcional SaaS RMB 100-300/mes ($14-42)</td></tr>
+<tr><td>IVA chino (增值税)</td><td><strong>13%</strong> — recuperable 100% al exportar (出口退税)</td></tr>
+<tr><td>Export refund</td><td>退税无纸化 100% digital. <strong>3-5 días hábiles</strong> (Clase II) → 1-2 días (Clase I tras 12-18 meses)</td></tr>
+<tr><td>HS Code máquina láser CO2</td><td><code style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:3px;color:#a371f7">8456.11.00</code></td></tr>
+<tr><td>Arancel Perú (TLC China-Perú)</td><td><strong>0%</strong> ✅ confirmado (con Forma F)</td></tr>
+<tr><td>Transfer pricing CV Tech ↔ KUY</td><td>10% margen — requiere documentación para auditoría</td></tr>
+</table>
+
+<h3>💵 Salario Sebastián (decisión D2 — ya tomada)</h3>
+<table>
+<tr><th>Concepto</th><th>Monto</th><th>Nota</th></tr>
+<tr><td>Salario total</td><td><strong>$2,000 USD/mes</strong> ($24K/año)</td><td>Pagado por CV Tech — legítimo, justifica visa Z + residencia en China</td></tr>
+<tr><td>Componente vivienda</td><td>$1,000</td><td>Cubre departamento en Shenzhen (zona por definir)</td></tr>
+<tr><td>Comida + ahorro personal</td><td>$1,000</td><td>Personal</td></tr>
+</table>
+
+<h3>🧯 Checklist legal warehouse (protección física obligatoria China)</h3>
+<p style="color:#8b949e;font-size:13px">Aplica al warehouse Shenzhen igual que aplicaba en el plan original. Verificar TODO antes de firmar contrato.</p>
+<table>
+<tr><th>Requisito</th><th>Acción</th></tr>
+<tr><td>Certificado de bomberos vigente</td><td><strong>SOLICITAR antes de firmar</strong></td></tr>
+<tr><td>Extintores adecuados a maquinaria</td><td>Verificar en visita</td></tr>
+<tr><td>Sistema alarma + detectores de humo</td><td>Verificar</td></tr>
+<tr><td>Salidas de emergencia señalizadas (防火规范)</td><td>Verificar</td></tr>
+<tr><td>Instalación eléctrica con puesta a tierra</td><td>Inspección eléctrica obligatoria</td></tr>
+<tr><td>Pasillos ≥2m (almacenamiento ordenado)</td><td>Layout planning</td></tr>
+<tr><td>Seguro mercadería (0.12-0.25% anual)</td><td>Contratar 平安/PICC</td></tr>
+<tr><td>Seguro responsabilidad civil terceros</td><td>Contratar</td></tr>
+<tr><td>CCTV grabación 24/7</td><td>Recomendado · equipo $500-1K</td></tr>
+<tr><td>Botiquín primeros auxilios</td><td>Comprar</td></tr>
+</table>
+
+<h3>👥 Estructura organizacional del grupo (21 personas)</h3>
+<div class="card-grid">
+<div class="card"><h4>👔 Directorio familiar (4)</h4><ul style="margin-left:18px;font-size:13px;line-height:1.8"><li><strong>Jose Contreras</strong> (66) — GG. Importaciones RUIDA/Voiern</li><li><strong>Irene Velasco</strong> (58) — Gte. Comercial + Coach. Cierra ventas grandes. Lives</li><li><strong>Sebastián Contreras</strong> (29) — GG Adjunto + GG Sede China</li><li><strong>Jair Contreras</strong> (21) — Gte. Marketing</li></ul></div>
+<div class="card"><h4>💼 Ventas (2) — bajo Irene</h4><ul style="margin-left:18px;font-size:13px;line-height:1.8"><li><strong>Melva</strong> — vendedora/cerradora</li><li><strong>Jhovana</strong> — vendedora/cerradora</li><li style="color:#8b949e">Reparto por orden de llegada · cotizan en Odoo · ~15 máq/mes</li></ul></div>
+<div class="card"><h4>🎬 Marketing (5) — bajo Jair</h4><ul style="margin-left:18px;font-size:13px;line-height:1.8"><li><strong>Lucía</strong> — guiones full-time</li><li><strong>Antonella</strong> — content part-time</li><li><strong>Diego</strong> — filmmaker/editor</li><li><strong>Carlos</strong> — diseño gráfico</li><li><strong>Gianella</strong> — diseño cortes industriales</li></ul></div>
+<div class="card"><h4>🔧 Soporte técnico (4) — PE + BO</h4><ul style="margin-left:18px;font-size:13px;line-height:1.8"><li><strong>Josafat</strong> (PE) — presencial + remoto</li><li><strong>Gerson</strong> (PE) — presencial + remoto</li><li><strong>Aldo</strong> (BO) — mixto + sur PE</li><li><strong>Gustavo</strong> (BO) — solo remoto</li></ul></div>
+<div class="card"><h4>📊 Admin + Logística (2)</h4><ul style="margin-left:18px;font-size:13px;line-height:1.8"><li><strong>Elisabeth</strong> — contadora (Odoo + Excel)</li><li><strong>Jesús Obando</strong> — inventario/logística PE</li></ul></div>
+<div class="card"><h4>🇨🇳 China (a contratar)</h4><ul style="margin-left:18px;font-size:13px;line-height:1.8"><li><strong>1 supervisor warehouse</strong> — RMB 8-10K</li><li><strong>2 operarios warehouse</strong></li><li style="color:#8b949e">+ freelance técnico Shenzhen (post-decisión warehouse)</li></ul></div>
+</div>
+
+<h3>📞 Capacidad de soporte para Línea 2 (sin contratar a nadie)</h3>
+<table>
+<tr><th>Mes Línea 2</th><th>Clientes nuevos/mes</th><th>Acumulados</th><th>Horas soporte/mes</th><th>% capacidad usada</th></tr>
+<tr><td>Mes 3</td><td>5</td><td>5</td><td>22h</td><td>11%</td></tr>
+<tr><td>Mes 6</td><td>5</td><td>30</td><td>35h</td><td>22%</td></tr>
+<tr><td>Mes 12</td><td>5</td><td>90</td><td>65h</td><td>41%</td></tr>
+<tr><td>Mes 18</td><td>8</td><td>150</td><td>120h</td><td><strong>75% (límite)</strong></td></tr>
+</table>
+<p style="color:#8b949e;font-size:13px">Capacidad total: 640h/mes (4 ingenieros × 160h). Hoy ~70-80% ocupada en clientes locales = 130-190h libres. <strong>Hasta 150 clientes acumulados de Línea 2 sin contratar a nadie nuevo.</strong> Soporte L2 vía Zoom.</p>
+
+<h3>🟠 Alibaba Gold Supplier (setup Línea 2)</h3>
+<table>
+<tr><th>Aspecto</th><th>Detalle</th></tr>
+<tr><td>Tier</td><td>Gold Supplier Basic — <strong>$3-4K USD/año</strong></td></tr>
+<tr><td>Cuenta a nombre de</td><td>CV Technology</td></tr>
+<tr><td>Pagos</td><td>Trade Assurance → Ping An Bank (comisión ~5% del pedido)</td></tr>
+<tr><td>Productos showcase iniciales</td><td>9060 PRO IA TEC + 1390 PRO IA TEC</td></tr>
+<tr><td>Certificados a obtener</td><td>CE Declaration of Conformity + FCC Part 15 (pedir al proveedor)</td></tr>
+</table>
+</section>
+
+<div class="footer">
+<p>CV Technology — Plan estratégico Shenzhen · 4 escenarios + Estado Financiero + Anexo operativo · actualizado 11 junio 2026</p>
+<p>Sebastián Contreras · Director · sebastian@c4vlaser.com</p>
+<p style="margin-top:12px;color:#6e7681;font-size:12px">Proyecciones basadas en data verificada: fletes LCL, distribuidores locales por país, demanda servicio técnico Perú. Los precios y costos pueden variar.</p>
+</div>
+
+</div>
+</body>
+</html>

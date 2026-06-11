@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Bot CeVi — Informe ejecutivo · C4V HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #140d0d;
+  --bg-card: #1c1111;
+  --bg-deep: #0e0808;
+  --bg-head: #241715;
+  --ink: #f2e8d9;
+  --ink-soft: #c9bba6;
+  --ink-mute: #8a7d6b;
+  --laser: #FF3B30;
+  --laser-hover: #ff6b54;
+  --brand: #C62828;
+  --ember: #ff8a5c;
+  --line: rgba(255,59,48,0.14);
+  --ok: #3fb950;
+  --warn: #d29922;
+  --err: #ff6b54;
+  --ease: cubic-bezier(0.25,1,0.5,1);
+
+  --tiktok-bg: #0e0808;
+  --meta-fb: #1877f2;
+  --meta-ig: #c13584;
+  --whatsapp: #25d366;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Manrope", -apple-system, "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--laser-hover); }
+a:hover { color: var(--laser); }
+
+/* ===== Barra láser de progreso ===== */
+#laser-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--laser);
+  box-shadow: 0 0 12px rgba(255,59,48,0.8);
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* ===== Breadcrumb ===== */
+.hq-breadcrumb {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 48px 16px;
+}
+
+/* ===== Reveals ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ===== Tablas ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+}
+th {
+  background: var(--bg-head);
+  color: var(--ember);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  font-size: 14px;
+}
+tbody tr:nth-child(odd) { background: rgba(242,232,217,0.02); }
+tbody tr:nth-child(even) { background: rgba(242,232,217,0.04); }
+
+/* ===== HERO ===== */
+.hero {
+  background: var(--bg-deep);
+  color: var(--ink);
+  padding: 64px 48px 64px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,59,48,0.16) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-family: "Unbounded", "Manrope", sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 24px;
+  max-width: 860px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--laser-hover);
+}
+.hero-sub {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin-bottom: 48px;
+}
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+}
+.stat-num {
+  font-family: "Manrope", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.stat-label {
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  line-height: 1.4;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 88px 48px;
+}
+.section.alt { background: var(--bg-deep); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); max-width: none; }
+.section.alt .section-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+.section.dark { background: var(--bg-deep); color: var(--ink); max-width: none; }
+.section.dark .section-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+.section.dark .lead { color: var(--ink-soft); }
+
+.kicker {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--laser);
+  margin-bottom: 12px;
+}
+.section.dark .kicker { color: var(--laser-hover); }
+
+h2 {
+  font-family: "Unbounded", "Manrope", sans-serif;
+  font-size: 25px;
+  line-height: 1.25;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 16px;
+  max-width: 820px;
+}
+h2 em { font-style: normal; color: var(--laser-hover); }
+.lead {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+.lead strong { color: var(--ink); }
+
+/* ===== Architecture diagram ===== */
+.arch-diagram {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 56px 32px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  border: 1px solid var(--line);
+}
+.arch-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Bot comparison ===== */
+.bot-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+.bot-card-big {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 36px;
+  position: relative;
+}
+.bot-card-big.tiktok { background: var(--tiktok-bg); color: var(--ink); border: 1px solid var(--line); }
+.bot-card-big.tiktok .label { color: var(--ink-mute); }
+.bot-card-big.tiktok h3 { color: var(--ember); }
+.bot-card-big.tiktok .role-text { color: var(--ink-soft); }
+.bot-card-big.tiktok .bar-track { background: rgba(242,232,217,0.08); }
+.bot-card-big.tiktok .stat-box { background: rgba(242,232,217,0.03); border-color: var(--line); }
+.bot-card-big.tiktok .stat-box .stat-k { color: var(--ink-mute); }
+.bot-card-big .channel-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(242,232,217,0.06);
+  color: var(--ink-soft);
+  padding: 6px 12px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+.bot-card-big.tiktok .channel-pill { background: rgba(242,232,217,0.06); color: var(--ink-soft); }
+.bot-card-big h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ember);
+  margin-bottom: 8px;
+}
+.role-tag {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--laser-hover);
+  margin-bottom: 12px;
+}
+.bot-card-big.tiktok .role-tag { color: var(--laser-hover); }
+.role-text {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+  min-height: 100px;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ink-mute);
+  margin-bottom: 6px;
+}
+.bar-block { margin-bottom: 18px; }
+.bar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.bar-label { font-size: 13.5px; color: var(--ink-soft); }
+.bar-value { font-size: 14px; font-weight: 700; color: var(--ink); }
+.bar-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(242,232,217,0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background: var(--laser);
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(255,59,48,0.5);
+}
+.bar-fill.cool { background: var(--ok); box-shadow: 0 0 8px rgba(63,185,80,0.4); }
+.bar-fill.warm { background: var(--laser); }
+
+.stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+.stat-box {
+  background: rgba(242,232,217,0.03);
+  border-radius: 8px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+}
+.stat-box .stat-v {
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+.stat-box .stat-k {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+/* ===== Funnel ===== */
+.funnel {
+  margin-top: 32px;
+}
+.funnel-stage {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 28px;
+  align-items: start;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+.funnel-stage:last-child { border-bottom: none; }
+.funnel-num {
+  font-family: "Manrope", sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--laser);
+  line-height: 1;
+}
+.funnel-body h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.funnel-body p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.funnel-body p strong { color: var(--ink); }
+.funnel-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.funnel-tag {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: rgba(242,232,217,0.06);
+  color: var(--ink-soft);
+}
+.funnel-tag.crit { background: rgba(255,59,48,0.12); color: var(--laser-hover); }
+
+/* ===== Channel flows (subway map style) ===== */
+.tracks {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.track {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px;
+}
+.track-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.track-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.track-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.track-icon.tiktok { background: var(--bg-deep); border: 1px solid rgba(242,232,217,0.18); }
+.track-icon.meta { background: var(--meta-ig); }
+.track-icon.wa { background: var(--whatsapp); }
+.track-icon svg { width: 22px; height: 22px; fill: #f2e8d9; }
+.track-name {
+  font-family: "Manrope", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.track-mission {
+  font-size: 13px;
+  color: var(--ink-mute);
+  font-style: italic;
+  max-width: 360px;
+}
+.track-steps {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  overflow-x: auto;
+}
+.track-step {
+  flex: 1;
+  min-width: 130px;
+  background: rgba(242,232,217,0.04);
+  padding: 16px;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid transparent;
+}
+.track-step.final { background: rgba(255,59,48,0.1); border-color: rgba(255,59,48,0.3); }
+.track-step.exception { background: rgba(210,153,34,0.1); border-color: rgba(210,153,34,0.3); }
+.track-step::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--ink-mute);
+  z-index: 1;
+}
+.track-step:last-child::after { content: ""; }
+.step-tag {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ink-mute);
+  margin-bottom: 6px;
+}
+.track-step.final .step-tag { color: var(--laser-hover); }
+.track-step.exception .step-tag { color: var(--warn); }
+.step-text {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+/* ===== Risk grid (semáforo) ===== */
+.risks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+.risk-col h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--ember);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.risk-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.risk-dot.crit { background: var(--err); box-shadow: 0 0 8px rgba(255,107,84,0.6); }
+.risk-dot.mid  { background: var(--warn); box-shadow: 0 0 8px rgba(210,153,34,0.5); }
+.risk-dot.info { background: var(--ok); box-shadow: 0 0 8px rgba(63,185,80,0.5); }
+.risk-card {
+  background: var(--bg-card);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  border: 1px solid var(--line);
+}
+.risk-card h4 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.risk-card p {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+/* ===== SLA visualization ===== */
+.sla-block {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 48px;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 56px;
+  align-items: center;
+  border: 1px solid var(--line);
+}
+.sla-clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.sla-clock svg { width: 100%; height: 100%; }
+.sla-clock .num {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+}
+.sla-clock .num-val { font-size: 52px; font-weight: 800; line-height: 1; color: var(--ink); }
+.sla-clock .num-unit { font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-mute); margin-top: 4px; }
+.sla-text h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--ember);
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+.sla-text p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+  line-height: 1.55;
+}
+.sla-gap {
+  display: inline-block;
+  background: rgba(255,59,48,0.12);
+  color: var(--laser-hover);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+/* ===== Decision list ===== */
+.decisions {
+  margin-top: 32px;
+}
+.decision {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+.decision:last-child { border-bottom: none; }
+.decision-num {
+  font-family: "Manrope", sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  color: rgba(242,232,217,0.25);
+  line-height: 1;
+}
+.decision-body h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.decision-body p {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.decision-priority {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+}
+.decision-priority.high {
+  background: rgba(255,59,48,0.15);
+  color: var(--laser-hover);
+}
+.decision-priority.med {
+  background: rgba(210,153,34,0.15);
+  color: var(--warn);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--bg-deep);
+  color: var(--ink-mute);
+  padding: 48px;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  border-top: 1px solid var(--line);
+}
+footer strong { color: var(--ink-soft); font-weight: 700; }
+
+@media (max-width: 900px) {
+  .hq-breadcrumb { padding: 16px 24px 12px; }
+  .hero { padding: 48px 24px 40px; }
+  .hero h1 { font-size: 24px; }
+  .hero-stats { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .stat-num { font-size: 32px; }
+  .section { padding: 56px 24px; }
+  .section.alt .section-inner, .section.dark .section-inner { padding: 0 24px; }
+  h2 { font-size: 20px; }
+  .lead { font-size: 16px; }
+  .bot-compare { grid-template-columns: 1fr; }
+  .risks { grid-template-columns: 1fr; }
+  .sla-block { grid-template-columns: 1fr; padding: 32px; gap: 32px; justify-items: center; text-align: center; }
+  .decision { grid-template-columns: 1fr; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<div id="laser-progress"></div>
+
+<div class="hq-breadcrumb">
+  <a href="../" style="display:inline-flex;align-items:center;gap:8px;background:#1c1111;border:1px solid rgba(255,59,48,0.25);color:#c9bba6;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:0.04em;padding:8px 16px;border-radius:100px;transition:border-color 0.3s cubic-bezier(0.25,1,0.5,1);" onmouseover="this.style.borderColor='#FF3B30'" onmouseout="this.style.borderColor='rgba(255,59,48,0.25)'">&larr; C4V HQ</a>
+</div>
+
+<!-- =================== HERO =================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Estado del sistema · Mayo 2026</div>
+    <h1>Bot CeVi convierte conversaciones en <em>leads calificados</em> para Melva y Jhovana.</h1>
+    <p class="hero-sub">El sistema atiende 4 canales digitales en 3 países, usa 2 asistentes de OpenAI con misiones distintas, y promete contactar a cada lead en menos de 24 horas. Este es el estado real, los gaps detectados y las decisiones que el directorio necesita tomar.</p>
+
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">4</div>
+        <div class="stat-label">Canales de entrada<br>TikTok · IG · FB · WA</div>
+      </div>
+      <div>
+        <div class="stat-num">2</div>
+        <div class="stat-label">Asistentes OpenAI<br>uno por familia</div>
+      </div>
+      <div>
+        <div class="stat-num">24h</div>
+        <div class="stat-label">SLA prometido<br>al lead</div>
+      </div>
+      <div>
+        <div class="stat-num">3</div>
+        <div class="stat-label">Países atendidos<br>PE · BO · EC</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ARQUITECTURA =================== -->
+<section class="section">
+  <div class="kicker">Arquitectura del sistema</div>
+  <h2>De <em>cuatro canales digitales</em> a dos asesoras humanas en un mismo embudo.</h2>
+  <p class="lead">Cada canal tiene su forma de entrar, pero todos terminan en el mismo punto: una conversación humana con Melva o Jhovana. Los bots solo califican y derivan — no cierran ventas ni dan precios.</p>
+
+  <div class="arch-diagram">
+    <svg class="arch-svg" viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg">
+      <!-- Connectors -->
+      <g stroke="rgba(255,59,48,0.25)" stroke-width="2" fill="none">
+        <!-- TikTok DM → bot TikTok -->
+        <path d="M 130 130 Q 130 200 280 220" />
+        <!-- IG → bot Meta -->
+        <path d="M 380 130 Q 380 200 560 220" />
+        <!-- FB → bot Meta -->
+        <path d="M 620 130 Q 620 200 560 220" />
+        <!-- WA → bot Meta -->
+        <path d="M 870 130 Q 870 200 700 220" />
+
+        <!-- Bots → ManyChat -->
+        <path d="M 280 280 Q 280 320 420 340" />
+        <path d="M 620 280 Q 620 320 500 340" />
+
+        <!-- ManyChat → asesoras -->
+        <path d="M 460 380 Q 460 410 350 440" />
+        <path d="M 460 380 Q 460 410 570 440" />
+      </g>
+
+      <!-- Channel boxes (top row) -->
+      <g>
+        <!-- TikTok -->
+        <rect x="50" y="60" width="160" height="60" rx="10" fill="#0e0808" stroke="rgba(242,232,217,0.25)" stroke-width="1"/>
+        <text x="130" y="92" text-anchor="middle" fill="#f2e8d9" font-family="Manrope, sans-serif" font-size="14" font-weight="600">TikTok DM</text>
+        <text x="130" y="108" text-anchor="middle" fill="rgba(242,232,217,0.55)" font-family="Manrope, sans-serif" font-size="10">solo mensajes directos</text>
+
+        <!-- Instagram -->
+        <rect x="300" y="60" width="160" height="60" rx="10" fill="#c13584"/>
+        <text x="380" y="92" text-anchor="middle" fill="#f2e8d9" font-family="Manrope, sans-serif" font-size="14" font-weight="600">Instagram</text>
+        <text x="380" y="108" text-anchor="middle" fill="rgba(242,232,217,0.7)" font-family="Manrope, sans-serif" font-size="10">DM + comentarios</text>
+
+        <!-- Facebook -->
+        <rect x="540" y="60" width="160" height="60" rx="10" fill="#1877f2"/>
+        <text x="620" y="92" text-anchor="middle" fill="#f2e8d9" font-family="Manrope, sans-serif" font-size="14" font-weight="600">Facebook</text>
+        <text x="620" y="108" text-anchor="middle" fill="rgba(242,232,217,0.7)" font-family="Manrope, sans-serif" font-size="10">DM + comentarios</text>
+
+        <!-- WhatsApp -->
+        <rect x="790" y="60" width="160" height="60" rx="10" fill="#25d366"/>
+        <text x="870" y="92" text-anchor="middle" fill="#f2e8d9" font-family="Manrope, sans-serif" font-size="14" font-weight="600">WhatsApp</text>
+        <text x="870" y="108" text-anchor="middle" fill="rgba(242,232,217,0.85)" font-family="Manrope, sans-serif" font-size="10">DM directo</text>
+      </g>
+
+      <!-- Bot layer -->
+      <g>
+        <!-- Bot TikTok -->
+        <rect x="180" y="220" width="200" height="68" rx="10" fill="#1c1111" stroke="#8a7d6b" stroke-width="2"/>
+        <text x="280" y="248" text-anchor="middle" fill="#f2e8d9" font-family="Manrope, sans-serif" font-size="15" font-style="italic">Bot CeVi · TikTok</text>
+        <text x="280" y="270" text-anchor="middle" fill="#8a7d6b" font-family="Manrope, sans-serif" font-size="11" letter-spacing="1">CAPTURADOR DE WHATSAPP</text>
+
+        <!-- Bot Meta -->
+        <rect x="460" y="220" width="280" height="68" rx="10" fill="#1c1111" stroke="#c62828" stroke-width="2"/>
+        <text x="600" y="248" text-anchor="middle" fill="#f2e8d9" font-family="Manrope, sans-serif" font-size="15" font-style="italic">Bot CeVi · Meta</text>
+        <text x="600" y="270" text-anchor="middle" fill="#8a7d6b" font-family="Manrope, sans-serif" font-size="11" letter-spacing="1">CALIFICADOR + DERIVADOR</text>
+      </g>
+
+      <!-- ManyChat router -->
+      <g>
+        <rect x="380" y="340" width="240" height="44" rx="22" fill="#241715" stroke="rgba(255,59,48,0.25)" stroke-width="1"/>
+        <text x="500" y="367" text-anchor="middle" fill="#f2e8d9" font-family="Manrope, sans-serif" font-size="13" font-weight="600">ManyChat — routing</text>
+      </g>
+
+      <!-- Asesoras -->
+      <g>
+        <circle cx="350" cy="450" r="22" fill="#c62828"/>
+        <text x="350" y="455" text-anchor="middle" fill="#f2e8d9" font-family="Manrope, sans-serif" font-size="11" font-weight="700">M</text>
+        <text x="350" y="490" text-anchor="middle" fill="#f2e8d9" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Melva</text>
+
+        <circle cx="570" cy="450" r="22" fill="#c62828"/>
+        <text x="570" y="455" text-anchor="middle" fill="#f2e8d9" font-family="Manrope, sans-serif" font-size="11" font-weight="700">J</text>
+        <text x="570" y="490" text-anchor="middle" fill="#f2e8d9" font-family="Manrope, sans-serif" font-size="12" font-weight="600">Jhovana</text>
+      </g>
+
+      <!-- Labels -->
+      <text x="40" y="200" fill="#8a7d6b" font-family="Manrope, sans-serif" font-size="10" letter-spacing="2" font-weight="700">ENTRADAS</text>
+      <text x="40" y="260" fill="#8a7d6b" font-family="Manrope, sans-serif" font-size="10" letter-spacing="2" font-weight="700">BOTS IA</text>
+      <text x="40" y="367" fill="#8a7d6b" font-family="Manrope, sans-serif" font-size="10" letter-spacing="2" font-weight="700">ROUTER</text>
+      <text x="40" y="455" fill="#8a7d6b" font-family="Manrope, sans-serif" font-size="10" letter-spacing="2" font-weight="700">HUMANOS</text>
+    </svg>
+  </div>
+</section>
+
+<!-- =================== BOT COMPARE =================== -->
+<section class="section alt">
+  <div class="section-inner">
+    <div class="kicker">Los dos bots no son iguales</div>
+    <h2>Cada bot tiene una <em>misión distinta</em>, una temperatura distinta, un tamaño distinto.</h2>
+    <p class="lead">El bot de TikTok solo captura el WhatsApp del lead y lo transfiere. El bot de Meta lo califica con 7 datos y lo deriva con un resumen al equipo humano. Operan con la misma marca pero con configuraciones muy diferentes — y ese contraste tiene implicancias operativas.</p>
+
+    <div class="bot-compare">
+
+      <div class="bot-card-big tiktok">
+        <div class="channel-pill">TikTok DM</div>
+        <h3>Cevi TikTok EM</h3>
+        <div class="role-tag">Capturador puro</div>
+        <p class="role-text">Solo consigue el WhatsApp del lead y le promete que el equipo lo contactará en 24 horas. No envía imágenes, no envía links, no califica, no da precios. Termina con el handoff a otro canal.</p>
+
+        <div class="bar-block">
+          <div class="bar-row">
+            <span class="bar-label">Creatividad del bot (temperature)</span>
+            <span class="bar-value">1.0</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill warm" style="width: 100%;"></div></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-v">5</div>
+            <div class="stat-k">secciones en el prompt</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-v">~33 KB</div>
+            <div class="stat-k">tamaño del prompt</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bot-card-big">
+        <div class="channel-pill">Meta · WhatsApp · IG · FB</div>
+        <h3>CeVi - EM</h3>
+        <div class="role-tag">Calificador + derivador</div>
+        <p class="role-text">Recolecta 7 datos del lead (nombre, ciudad, modelo, industria, tipo de emprendedor, status, teléfono), arma un resumen para la asesora y la activa con 3 mensajes de cierre. Maneja imágenes y excepciones.</p>
+
+        <div class="bar-block">
+          <div class="bar-row">
+            <span class="bar-label">Creatividad del bot (temperature)</span>
+            <span class="bar-value">0.25</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill cool" style="width: 25%;"></div></div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-v">17</div>
+            <div class="stat-k">secciones en el prompt</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-v">~37 KB</div>
+            <div class="stat-k">tamaño del prompt</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== FUNNEL =================== -->
+<section class="section">
+  <div class="kicker">El embudo del lead</div>
+  <h2>El lead pasa por <em>cuatro etapas</em> antes de hablar con una persona.</h2>
+  <p class="lead">Esta es la secuencia común a todos los canales. En cada etapa el sistema toma decisiones automáticas que determinan si el lead avanza o se descarta. Los porcentajes de conversión entre etapas hoy <strong>no se están midiendo</strong>.</p>
+
+  <div class="funnel">
+    <div class="funnel-stage">
+      <div class="funnel-num">01</div>
+      <div class="funnel-body">
+        <h4>Entrada</h4>
+        <p>El lead escribe por uno de los 4 canales. ManyChat detecta el canal y activa el Assistant correspondiente (TikTok o Meta).</p>
+        <div class="funnel-tags">
+          <span class="funnel-tag">DM o comentario en post</span>
+          <span class="funnel-tag">Saludo simple</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="funnel-stage">
+      <div class="funnel-num">02</div>
+      <div class="funnel-body">
+        <h4>Conversación</h4>
+        <p>El bot saluda, pide nombre y ciudad. Después arma una conversación tipo Q&amp;A — el lead pregunta por modelos, materiales o capacidades, el bot responde con FAQ + pivote hacia el cierre.</p>
+        <div class="funnel-tags">
+          <span class="funnel-tag">Política: no dar precios</span>
+          <span class="funnel-tag">Máximo 4 turnos antes de derivar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="funnel-stage">
+      <div class="funnel-num">03</div>
+      <div class="funnel-body">
+        <h4>Calificación</h4>
+        <p>El bot detecta intención de compra (pregunta de precio, "me interesa", "cómo pago") o llegó al límite de 4 interacciones. Activa el gatillo de derivación. Si no tiene el teléfono, lo pide. Si lo tiene, salta a la siguiente etapa.</p>
+        <div class="funnel-tags">
+          <span class="funnel-tag">7 datos posibles a recolectar</span>
+          <span class="funnel-tag">Teléfono es obligatorio</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="funnel-stage">
+      <div class="funnel-num">04</div>
+      <div class="funnel-body">
+        <h4>Asesora humana</h4>
+        <p>El bot cierra con 3 mensajes literales y entrega el caso a ManyChat. ManyChat asigna el lead a Melva o Jhovana — y aquí está el gap más importante: <strong>no tenemos visibilidad de cómo ManyChat hace exactamente esa asignación, ni cómo se mide si se cumple la promesa de 24h.</strong></p>
+        <div class="funnel-tags">
+          <span class="funnel-tag crit">Sin medición de SLA</span>
+          <span class="funnel-tag crit">Sin visibilidad del routing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TRACKS / SUBWAY MAP =================== -->
+<section class="section alt">
+  <div class="section-inner">
+    <div class="kicker">Los flujos en un vistazo</div>
+    <h2>Tres recorridos distintos según el canal de entrada.</h2>
+    <p class="lead">Cada canal tiene su lógica propia. TikTok es el más corto — solo captura el WhatsApp. Instagram y Facebook recorren todo el funnel. WhatsApp es el más rápido porque el bot ya tiene el teléfono desde el primer mensaje.</p>
+
+    <div class="tracks">
+
+      <!-- TikTok Track -->
+      <div class="track">
+        <div class="track-head">
+          <div class="track-title">
+            <div class="track-icon tiktok">
+              <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.6a8.16 8.16 0 0 0 5 1.49v-3.4a4.85 4.85 0 0 1-2.07-.04z"/></svg>
+            </div>
+            <div class="track-name">TikTok DM</div>
+          </div>
+          <div class="track-mission">Captura WhatsApp y transfiere de canal</div>
+        </div>
+        <div class="track-steps">
+          <div class="track-step">
+            <div class="step-tag">PASO 1</div>
+            <div class="step-text">Saludo sin pedir WhatsApp</div>
+          </div>
+          <div class="track-step">
+            <div class="step-tag">PASO 2</div>
+            <div class="step-text">Respuesta a 1ª pregunta + pivote</div>
+          </div>
+          <div class="track-step">
+            <div class="step-tag">PASO 3</div>
+            <div class="step-text">2ª pregunta + pivote más fuerte</div>
+          </div>
+          <div class="track-step">
+            <div class="step-tag">PASO 4</div>
+            <div class="step-text">Lead entrega WhatsApp</div>
+          </div>
+          <div class="track-step final">
+            <div class="step-tag">CIERRE</div>
+            <div class="step-text">"En 24h te contactamos"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Meta IG/FB Track -->
+      <div class="track">
+        <div class="track-head">
+          <div class="track-title">
+            <div class="track-icon meta">
+              <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.87v-6.99H7.9V12h2.5V9.8c0-2.47 1.47-3.83 3.72-3.83 1.08 0 2.21.19 2.21.19V8.5h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0 0 22 12z"/></svg>
+            </div>
+            <div class="track-name">Instagram + Facebook DM</div>
+          </div>
+          <div class="track-mission">Califica y deriva con teléfono</div>
+        </div>
+        <div class="track-steps">
+          <div class="track-step">
+            <div class="step-tag">PASO 1</div>
+            <div class="step-text">Saludo + pide nombre y ciudad</div>
+          </div>
+          <div class="track-step">
+            <div class="step-tag">PASO 2</div>
+            <div class="step-text">Recolecta hasta 6 datos del lead</div>
+          </div>
+          <div class="track-step">
+            <div class="step-tag">PASO 3</div>
+            <div class="step-text">Detecta gatillo de derivación</div>
+          </div>
+          <div class="track-step">
+            <div class="step-tag">PASO 4</div>
+            <div class="step-text">Pide teléfono con prefijo país</div>
+          </div>
+          <div class="track-step final">
+            <div class="step-tag">CIERRE</div>
+            <div class="step-text">Deriva con 3 mensajes a asesora</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WhatsApp Track -->
+      <div class="track">
+        <div class="track-head">
+          <div class="track-title">
+            <div class="track-icon wa">
+              <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+            </div>
+            <div class="track-name">WhatsApp directo</div>
+          </div>
+          <div class="track-mission">Calificación rápida, sin pedir teléfono</div>
+        </div>
+        <div class="track-steps">
+          <div class="track-step">
+            <div class="step-tag">PASO 1</div>
+            <div class="step-text">Saludo, ya conoce el teléfono</div>
+          </div>
+          <div class="track-step">
+            <div class="step-tag">PASO 2</div>
+            <div class="step-text">Recolecta datos en menos turnos</div>
+          </div>
+          <div class="track-step">
+            <div class="step-tag">PASO 3</div>
+            <div class="step-text">Gatillo → deriva inmediato</div>
+          </div>
+          <div class="track-step final">
+            <div class="step-tag">CIERRE</div>
+            <div class="step-text">3 mensajes y handoff a asesora</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Excepción -->
+      <div class="track">
+        <div class="track-head">
+          <div class="track-title">
+            <div class="track-icon" style="background: var(--warn);">
+              <svg viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 4.5L19.5 19h-15L12 6.5zM11 10v5h2v-5h-2zm0 6v2h2v-2h-2z"/></svg>
+            </div>
+            <div class="track-name">Flujo de excepción</div>
+          </div>
+          <div class="track-mission">Modelos sin ficha técnica → derivación inmediata</div>
+        </div>
+        <div class="track-steps">
+          <div class="track-step exception">
+            <div class="step-tag">EXCEPCIÓN</div>
+            <div class="step-text">Lead menciona modelo de la lista de excepción</div>
+          </div>
+          <div class="track-step exception">
+            <div class="step-tag">CONFIRMA</div>
+            <div class="step-text">"Sí, contamos con esa máquina"</div>
+          </div>
+          <div class="track-step final">
+            <div class="step-tag">CIERRE</div>
+            <div class="step-text">Deriva en 1 sola respuesta</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== RIESGOS SEMÁFORO =================== -->
+<section class="section">
+  <div class="kicker">Estado de salud del sistema</div>
+  <h2>El sistema funciona, pero <em>hay gaps que el directorio debe atender.</em></h2>
+  <p class="lead">Estos son los riesgos detectados al auditar la configuración de los dos Assistants OpenAI. Los críticos requieren decisión esta semana; los medios pueden esperar al próximo ciclo de mantenimiento.</p>
+
+  <div class="risks">
+
+    <div class="risk-col">
+      <h3><span class="risk-dot crit"></span>Críticos</h3>
+      <div class="risk-card">
+        <h4>Catálogo del bot desactualizado</h4>
+        <p>Los modelos que el bot conoce no coinciden con el catálogo vigente real. Puede prometer máquinas descontinuadas o no reconocer modelos nuevos.</p>
+      </div>
+      <div class="risk-card">
+        <h4>SLA de 24h sin medición</h4>
+        <p>El bot promete contacto en 24 horas, pero nadie monitorea si efectivamente Melva y Jhovana cumplen ese plazo. Promesa potencialmente incumplida.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Handoff TikTok → WhatsApp opaco</h4>
+        <p>Cuando un lead da su WhatsApp en TikTok, no se sabe con certeza cómo ManyChat lo asigna a la asesora ni si conserva el contexto previo.</p>
+      </div>
+    </div>
+
+    <div class="risk-col">
+      <h3><span class="risk-dot mid"></span>Medios</h3>
+      <div class="risk-card">
+        <h4>Bot de TikTok improvisa demasiado</h4>
+        <p>Temperature configurada en 1.0 (vs 0.25 en Meta) — hace que el bot improvise sin script consistente. Debería bajarse a 0.4.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Mantenimiento desigual entre bots</h4>
+        <p>El bot Meta recibe mejoras, el de TikTok quedó como copia inicial sin actualizaciones recientes. No hay proceso definido de sincronización.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Imágenes en dominio externo</h4>
+        <p>El bot envía imágenes desde un dominio de un proveedor externo (gusboregio.com). Si ese servicio cae, el bot envía links rotos a los leads.</p>
+      </div>
+    </div>
+
+    <div class="risk-col">
+      <h3><span class="risk-dot info"></span>Funcionando bien</h3>
+      <div class="risk-card">
+        <h4>Política "sin precios" coherente</h4>
+        <p>Los dos bots respetan la decisión comercial de no dar precios concretos. Solo dan un anchor mínimo cuando el lead insiste.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Separación de bots por canal</h4>
+        <p>La arquitectura de dos Assistants distintos (TikTok captura, Meta califica) tiene sentido operativo por las limitaciones de cada canal.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Excepciones por modelo definidas</h4>
+        <p>El bot Meta tiene reglas claras de cuándo derivar inmediato sin intentar dar info técnica que no maneja.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== SLA 24H =================== -->
+<section class="section alt">
+  <div class="section-inner">
+    <div class="kicker">La promesa al cliente</div>
+    <h2>El bot le promete a cada lead que será contactado en <em>menos de 24 horas</em>.</h2>
+    <p class="lead">Es la misma promesa en TikTok, Instagram, Facebook y WhatsApp. Consistente entre canales. Pero hoy nadie mide si se cumple, y si no se cumple, el lead nunca lo dice — simplemente se va con otra marca.</p>
+
+    <div class="sla-block">
+      <div class="sla-clock">
+        <svg viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="92" fill="none" stroke="rgba(242,232,217,0.12)" stroke-width="8"/>
+          <circle cx="100" cy="100" r="92" fill="none" stroke="#FF3B30" stroke-width="8"
+                  stroke-dasharray="578" stroke-dashoffset="0"
+                  transform="rotate(-90 100 100)"/>
+        </svg>
+        <div class="num">
+          <div class="num-val">24h</div>
+          <div class="num-unit">PROMETIDAS</div>
+        </div>
+      </div>
+      <div class="sla-text">
+        <h3>"Una asesora te estará llamando en las próximas 24 horas."</h3>
+        <p>Esta es la frase literal con la que el bot cierra cada conversación. La promesa es buena, el problema es que no hay medición.</p>
+        <p>Si Melva o Jhovana están saturadas, viaje, vacaciones, baja, el lead simplemente no recibe el llamado y el sistema no avisa a nadie.</p>
+        <span class="sla-gap">Gap: necesita un guardián del SLA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== DECISIONES =================== -->
+<section class="section dark">
+  <div class="section-inner">
+    <div class="kicker">Lo que el directorio decide</div>
+    <h2>Cuatro decisiones que <em>desbloquean</em> el siguiente paso.</h2>
+    <p class="lead">El equipo técnico puede ejecutar todo lo anterior, pero estas cuatro decisiones son de negocio, no de implementación. Hasta no tenerlas, el sistema sigue como está.</p>
+
+    <div class="decisions">
+      <div class="decision">
+        <div class="decision-num">01</div>
+        <div class="decision-body">
+          <h4>Definir la fuente única de verdad del catálogo</h4>
+          <p>Hoy el catálogo de modelos vive en 6 lugares distintos (bot Meta, bot TikTok, skill local, Odoo, sheet de oficina, prompts HSM). Hay que decidir cuál es el maestro: Google Sheet, base de datos PostgreSQL o documento Notion.</p>
+        </div>
+        <div class="decision-priority high">Alta · esta semana</div>
+      </div>
+
+      <div class="decision">
+        <div class="decision-num">02</div>
+        <div class="decision-body">
+          <h4>Asignar un guardián del SLA de 24h</h4>
+          <p>Definir quién monitorea diariamente que cada lead derivado reciba su llamada. Puede ser Pam-bot (notificación automática) o un humano que revise un dashboard. Sin esto, la promesa es retórica.</p>
+        </div>
+        <div class="decision-priority high">Alta · esta semana</div>
+      </div>
+
+      <div class="decision">
+        <div class="decision-num">03</div>
+        <div class="decision-body">
+          <h4>Confirmar el ownership del bot CeVi</h4>
+          <p>Quién es responsable de mantener los dos Assistants OpenAI actualizados (catálogo, FAQ, lógica). Puede ser Jair, Sebas, un freelance, o un proceso semanal de revisión. Sin dueño, la deriva ya observada entre bots se va a repetir.</p>
+        </div>
+        <div class="decision-priority med">Media · próximo ciclo</div>
+      </div>
+
+      <div class="decision">
+        <div class="decision-num">04</div>
+        <div class="decision-body">
+          <h4>Definir las 3 métricas mínimas del bot</h4>
+          <p>Hoy no se mide nada. Las 3 métricas mínimas son: % de leads de TikTok que dan su WhatsApp, % de leads derivados a Melva/Jhovana que terminan en venta, tiempo promedio entre derivación y primer contacto humano.</p>
+        </div>
+        <div class="decision-priority med">Media · próximo ciclo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Documento preparado por Claude Code · Auditoría de los Assistants OpenAI · 20 de mayo de 2026<br>
+  <strong>Estado:</strong> diagnóstico de consultoría · ninguna modificación aplicada al sistema en producción
+</footer>
+
+
+<script>
+(function () {
+  var bar = document.getElementById('laser-progress');
+  function onScroll() {
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    var p = max > 0 ? (window.scrollY || doc.scrollTop) / max : 0;
+    bar.style.width = (p * 100) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets = document.querySelectorAll('.section, footer');
+  if (!reduced && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    targets.forEach(function (el) {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+</html>

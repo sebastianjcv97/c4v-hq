@@ -446,6 +446,53 @@
   }
 
 
+
+  /* ============ PROYECTOS DEL GRUPO ============ */
+  .proyectos { position: relative; padding: 10vh 24px 14vh; }
+  .proyectos .inner { max-width: 820px; margin: 0 auto; }
+  .proyectos .kicker {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.5em; text-indent: 0.5em;
+    text-transform: uppercase;
+    color: var(--crema-faint);
+    text-align: center;
+    margin-bottom: 8vh;
+  }
+  .proy {
+    display: flex; align-items: baseline; gap: 18px;
+    padding: 26px 8px;
+    border-bottom: 1px solid rgba(255,59,48,0.12);
+    color: inherit; text-decoration: none;
+    transition: background 0.35s var(--quart), padding-left 0.35s var(--quart);
+  }
+  .proy:first-of-type { border-top: 1px solid rgba(255,59,48,0.12); }
+  a.proy:hover { background: rgba(255,59,48,0.05); padding-left: 18px; }
+  .proy .pnombre {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700; font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+    text-transform: uppercase;
+    color: var(--crema);
+    flex: 1;
+  }
+  .proy .pmeta { color: var(--crema-faint); font-size: 0.85rem; white-space: nowrap; }
+  .proy .pestado {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.52rem; font-weight: 700;
+    letter-spacing: 0.24em; text-indent: 0.24em;
+    text-transform: uppercase;
+    padding: 6px 13px; border-radius: 999px;
+    white-space: nowrap;
+  }
+  .pestado.publico { color: var(--laser-hot); border: 1px solid rgba(255,59,48,0.4); background: rgba(255,59,48,0.07); }
+  .pestado.interno { color: var(--crema-faint); border: 1px solid rgba(138,125,107,0.35); }
+  .pestado.obra { color: #d29922; border: 1px solid rgba(210,153,34,0.4); background: rgba(210,153,34,0.06); }
+  div.proy { opacity: 0.78; }
+  @media (max-width: 680px) {
+    .proy { flex-wrap: wrap; gap: 8px; }
+    .proy .pmeta { white-space: normal; width: 100%; order: 3; }
+  }
+
   /* ============ CORTE FINAL (crema invertido, idea 03) ============ */
   .corte-final {
     position: relative;
@@ -612,6 +659,21 @@
       <p>KPIs, bots y alertas del sistema multi-agente, latiendo en tiempo real. El pulso de la operación sin esperar al reporte de mañana.</p>
       <span class="ir">Ver el pulso <span class="flecha"></span></span>
     </a>
+  </section>
+
+  <!-- PROYECTOS DEL GRUPO -->
+  <section class="proyectos">
+    <div class="inner">
+      <p class="kicker reveal">Proyectos del grupo</p>
+      <a class="proy reveal" href="bot-cevi/"><span class="pnombre">Bot CeVi</span><span class="pmeta">Jair · ventas automatizadas ManyChat</span><span class="pestado publico">Informe</span></a>
+      <a class="proy reveal" href="https://sebastianjcv97.github.io/cevi-demo/"><span class="pnombre">CeVi Voice</span><span class="pmeta">Producto · asistente de voz en máquinas</span><span class="pestado publico">Demo</span></a>
+      <div class="proy reveal"><span class="pnombre">Sistema de Pagos</span><span class="pmeta">Jose · control de pagos y despachos, puente a Odoo</span><span class="pestado interno">Interno</span></div>
+      <div class="proy reveal"><span class="pnombre">Toby · Antifraude</span><span class="pmeta">Jose · verificación de transferencias con IA local</span><span class="pestado interno">Interno</span></div>
+      <div class="proy reveal"><span class="pnombre">Torre SEO</span><span class="pmeta">Jair · posicionamiento c4vlaser.com + GEO</span><span class="pestado obra">En construcción</span></div>
+      <div class="proy reveal"><span class="pnombre">Registro turnos CM</span><span class="pmeta">Jair · check-in del equipo creativo vía Discord</span><span class="pestado obra">En construcción</span></div>
+      <a class="proy reveal" href="https://c4vschool.com"><span class="pnombre">C4V School</span><span class="pmeta">Academia · cursos gratuitos para compradores</span><span class="pestado publico">En línea</span></a>
+      <a class="proy reveal" href="https://c4vlaser.com"><span class="pnombre">C4V Láser Web</span><span class="pmeta">El sitio comercial principal</span><span class="pestado publico">En línea</span></a>
+    </div>
   </section>
 
   <!-- CORTE FINAL -->

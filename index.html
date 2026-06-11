@@ -31,7 +31,8 @@ body::before{content:'';position:fixed;inset:0;background:
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 
 /* ============ GRID ============ */
-.grid{max-width:1100px;margin:24px auto 56px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.grid{max-width:980px;margin:24px auto 56px;padding:0 24px;display:grid;grid-template-columns:1fr;gap:22px}
+@media (min-width:680px){.grid{grid-template-columns:1fr 1fr}}
 .card{background:linear-gradient(180deg,#17171a 0%,var(--panel) 100%);border:1px solid var(--line);border-radius:16px;padding:34px 30px 30px;text-decoration:none;color:var(--txt);display:flex;flex-direction:column;position:relative;overflow:hidden;opacity:0;animation:fadeUp .65s ease forwards;transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
 .card:nth-child(1){animation-delay:.5s}.card:nth-child(2){animation-delay:.62s}
 .card:nth-child(3){animation-delay:.74s}.card:nth-child(4){animation-delay:.86s}
